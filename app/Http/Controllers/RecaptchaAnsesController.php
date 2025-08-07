@@ -63,14 +63,14 @@ class RecaptchaAnsesController extends Controller
                 };
             ");
             // 4. Esperar que la página cargue
-            $this->driver->wait(10)->until(
+            $this->driver->wait(5)->until(
                 WebDriverExpectedCondition::presenceOfElementLocated(
                     WebDriverBy::tagName('form')
                 )
             );
             // 5. Simular scroll y movimiento
             $this->driver->executeScript("window.scrollTo(0, 200);");
-            $this->chromeSimulator->humanDelay(0.5, 1);
+            $this->chromeSimulator->humanDelay(0.2, 0.8);
 
             // 6. Buscamos elementos del formulario a simular
             $elements = array();
@@ -154,26 +154,39 @@ class RecaptchaAnsesController extends Controller
             // 7. Llenar formulario como humano
             // Click en el campo
             $elements['doc_field']->click();
-            $this->chromeSimulator->humanDelay(0.5, 1);
+            $this->chromeSimulator->humanDelay(0.2, 0.5);
             // 7.1. Limpiar campo
             $elements['doc_field']->sendKeys(WebDriverKeys::CONTROL . 'a');
             $elements['doc_field']->sendKeys(WebDriverKeys::DELETE);
-            $this->chromeSimulator->humanDelay(0.3, 0.7);
+            $this->chromeSimulator->humanDelay(0.1, 0.5);
             // 7.2. Escribir CUIL como humano
             $this->chromeSimulator->typeLikeHuman($elements['doc_field'], $per_cuit);
-            $this->chromeSimulator->humanDelay(0.5, 1);
+            $this->chromeSimulator->humanDelay(0.25, 0.5);
             // 8. Esperar reCAPTCHA v3 (se ejecuta automáticamente)
-            $this->chromeSimulator->humanDelay(1.5, 2.5);
+            $this->chromeSimulator->humanDelay(1, 1.5);
             // 9. Hacer click en continuar
             $this->driver->executeScript("arguments[0].scrollIntoView(true);", [$elements['continue_btn']]);
-            $this->chromeSimulator->humanDelay(0.5, 1);
+            $this->chromeSimulator->humanDelay(0.25, 0.5);
             $elements['continue_btn']->click();
             // 10. Esperar respuesta
-            $this->chromeSimulator->humanDelay(3, 6);
+            $this->chromeSimulator->humanDelay(1, 3);
 
             // 11. Capturar resultado
             $page_source = $this->driver->getPageSource();
             $current_url = $this->driver->getCurrentURL();
+            $data = array();
+            $cookies = $this->driver->manage()->getCookies();
+            $cookieStrings = array();
+            foreach ($cookies as $cookie) {
+                $cookieStrings[] = $cookie['name'] . '=' . $cookie['value'];
+            }
+            $data['cookies'] = implode('; ', $cookieStrings);
+            $data['recaptcha'] = $this->driver->findElement(WebDriverBy::name('g-recaptcha-response'))->getAttribute('value');
+            $data['__VIEWSTATE'] = $this->driver->findElement(WebDriverBy::id('__VIEWSTATE'))->getAttribute('value') ?? '';
+            $data['__EVENTTARGET'] = $this->driver->findElement(WebDriverBy::id('__EVENTTARGET'))->getAttribute('value') ?? 'ctl00$ContentPlaceHolder1$DGOOSS$ctl02$ctl00';
+            $data['__EVENTARGUMENT'] = $this->driver->findElement(WebDriverBy::id('__EVENTARGUMENT'))->getAttribute('value') ?? '';
+            $data['__VIEWSTATEGENERATOR'] = $this->driver->findElement(WebDriverBy::id('__VIEWSTATEGENERATOR'))->getAttribute('value') ?? '';
+            $data['__EVENTVALIDATION'] = $this->driver->findElement(WebDriverBy::id('__EVENTVALIDATION'))->getAttribute('value') ?? '';
             // 12. Analizar resultado
             if (strpos($page_source, 'ERROR DE AUTENTICACION') !== false) {
                 return response()->json([
@@ -195,8 +208,15 @@ class RecaptchaAnsesController extends Controller
             }
             if (strpos($page_source, 'Obra Social') !== false ||
                 strpos($page_source, 'obra social') !== false) {
-
-                $print_button = null;
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Consulta realizada exitosamente',
+                    'content' => $page_source,
+                    'meta_data' => $data,
+                    'url' => $current_url,
+                    'download' => null
+                ], 200);
+                /*$print_button = null;
                 $print_selectors = [
                     // Selector específico del botón de imprimir
                     ['xpath', "//a[contains(@href, \"__doPostBack('ctl00\$ContentPlaceHolder1\$DGOOSS\$ctl02\$ctl00',''))\"]"],
@@ -305,8 +325,9 @@ class RecaptchaAnsesController extends Controller
                         'url' => $current_url,
                         'download' => null
                     ], 200);
-                }
+                }*/
             }
+
             if (strpos($page_source, 'error') !== false ||
                 strpos($page_source, 'Error') !== false) {
                 return response()->json([
@@ -317,16 +338,6 @@ class RecaptchaAnsesController extends Controller
                     'url' => $current_url
                 ], 500);
             }
-
-
-            // Resultado genérico
-            return response()->json([
-                'success' => true,
-                'message' => 'Respuesta obtenida',
-                'content' => $page_source,
-                'url' => $current_url
-            ], 200);
-
         } catch (Exception $e) {
             return response()->json([
                 'success' => false,
@@ -338,97 +349,6 @@ class RecaptchaAnsesController extends Controller
             if (isset($this->driver)) {
                 $this->driver->quit();
             }
-            // Limpieza final: eliminar cualquier archivo restante en el directorio de descarga
-            $this->cleanDownloadDirectory();
         }
-    }
-
-    private function cleanDownloadDirectory()
-    {
-        try {
-            $files = glob($this->downloadDir . '/*');
-            foreach ($files as $file) {
-                if (is_file($file)) {
-                    unlink($file);
-                }
-            }
-        } catch (Exception $e) {
-            // Log el error si es necesario, pero no interrumpir el flujo
-            Log::warning('Error limpiando directorio de descarga: ' . $e->getMessage());
-        }
-    }
-
-    /**
-     * Eliminar un archivo específico de forma segura
-     */
-    private function safeDeleteFile($file_path)
-    {
-        try {
-            if (file_exists($file_path)) {
-                unlink($file_path);
-                return true;
-            }
-        } catch (Exception $e) {
-            Log::warning('Error eliminando archivo: ' . $e->getMessage());
-        }
-        return false;
-    }
-
-    /**
-     * Esperar a que se complete la descarga
-     */
-    private function waitForDownload($timeout = 10)
-    {
-        $start_time = time();
-
-        while ((time() - $start_time) < $timeout) {
-            // Buscar archivos en el directorio de descarga
-            $files = glob($this->downloadDir . '/*');
-
-            // Filtrar archivos temporales (.crdownload, .tmp, etc.)
-            $completed_files = array_filter($files, function ($file) {
-                return !preg_match('/\.(crdownload|tmp|part)$/i', $file) && is_file($file);
-            });
-
-            if (!empty($completed_files)) {
-                // Esperar un poco más para asegurar que la descarga esté completa
-                sleep(1);
-
-                // Retornar el primer archivo encontrado
-                return reset($completed_files);
-            }
-
-            sleep(0.5); // Esperar medio segundo antes de volver a verificar
-        }
-
-        return null;
-    }
-
-    /**
-     * Obtener el archivo descargado más reciente
-     */
-    private function getLatestDownloadedFile()
-    {
-        $files = glob($this->downloadDir . '/*');
-
-        if (empty($files)) {
-            return null;
-        }
-
-        // Filtrar archivos temporales
-        $completed_files = array_filter($files, function ($file) {
-            return !preg_match('/\.(crdownload|tmp|part)$/i', $file) && is_file($file);
-        });
-
-        if (empty($completed_files)) {
-            return null;
-        }
-
-        // Ordenar por fecha de modificación (más reciente primero)
-        usort($completed_files, function ($a, $b) {
-            return filemtime($b) - filemtime($a);
-        });
-
-        return $completed_files[0];
     }
 }

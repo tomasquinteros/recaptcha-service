@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   selenium-chrome:
     image: selenium/standalone-chrome:latest
@@ -9,12 +10,27 @@ services:
       - SE_VNC_NO_PASSWORD=1
     volumes:
       - /dev/shm:/dev/shm
+      - shared-downloads:/home/seluser/Downloads  # <--- acá montamos el volumen compartido
     shm_size: 2gb
+    networks:
+      - shared_network
   laravel:
     build: .
     ports:
       - "8001:80"
     volumes:
       - .:/var/www/html
+      - shared-downloads:/var/www/html/public/downloads  # <--- Laravel accede acá
     depends_on:
-        - selenium-chrome
+      - selenium-chrome
+    environment:
+        - WWWUSER=1000
+        - WWWGROUP=1000
+    networks:
+      - shared_network
+volumes:
+  shared-downloads:  # <--- definición del volumen
+networks:
+  shared_network:
+    external: true
+    name: shared_network

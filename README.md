@@ -20,3 +20,10 @@
    - Modificar $selenium_url si usás otro setup
    - debug = true para ver todos los elementos
 
+Crear red compartida para que se pueda usar en ROL
+
+ - docker network create shared_red
+ - Luego asignarlas en los docker-compose.yml
+ - Inspeccionamos que los contenedores esten en la misma network: docker network inspect shared_network
+
+
