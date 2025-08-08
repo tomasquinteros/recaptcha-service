@@ -216,116 +216,7 @@ class RecaptchaAnsesController extends Controller
                     'url' => $current_url,
                     'download' => null
                 ], 200);
-                /*$print_button = null;
-                $print_selectors = [
-                    // Selector específico del botón de imprimir
-                    ['xpath', "//a[contains(@href, \"__doPostBack('ctl00\$ContentPlaceHolder1\$DGOOSS\$ctl02\$ctl00',''))\"]"],
-                    ['xpath', "//a[contains(@href, '__doPostBack') and contains(@href, 'DGOOSS')]"],
-                    ['xpath', "//img[@src='App_Themes/Imagenes/imprimir2.gif']/parent::a"],
-                    ['css', "a[href*='__doPostBack'][href*='DGOOSS']"],
-                    ['xpath', "//td[@align='center']//a[contains(@href, '__doPostBack')]"],
-                    ['xpath', "//img[contains(@src, 'imprimir')]/parent::a"]
-                ];
 
-                foreach ($print_selectors as $selector) {
-                    try {
-                        $method = $selector[0];
-                        $value = $selector[1];
-
-                        switch ($method) {
-                            case 'xpath':
-                                $print_button = $this->driver->findElement(WebDriverBy::xpath($value));
-                                break;
-                            case 'css':
-                                $print_button = $this->driver->findElement(WebDriverBy::cssSelector($value));
-                                break;
-                        }
-
-                        if ($print_button && $print_button->isDisplayed()) {
-                            break;
-                        }
-                    } catch (Exception $e) {
-                        continue;
-                    }
-                }
-                // Si encuentra datos sigue para descargar el archivo.
-                if ($print_button) {
-                    try {
-                        $this->cleanDownloadDirectory();
-                        $this->driver->executeScript("arguments[0].scrollIntoView(true);", [$print_button]);
-                        $this->chromeSimulator->humanDelay(0.5, 1);
-                        $print_button->click();
-                        $this->chromeSimulator->humanDelay(2, 4);
-                        $downloaded_file = $this->waitForDownload(10);
-                        if ($downloaded_file) {
-                            try {
-                                // Leer el contenido del archivo
-                                $file_content = file_get_contents($downloaded_file);
-                                $file_name = basename($downloaded_file);
-                                $file_size = filesize($downloaded_file);
-
-                                // Opcional: Convertir a base64 para envío
-                                $file_base64 = base64_encode($file_content);
-                                dd($file_base64);
-                                // Eliminar el archivo después de leerlo
-                                unlink($downloaded_file);
-
-                                return response()->json([
-                                    'success' => true,
-                                    'message' => 'Consulta realizada exitosamente y archivo descargado',
-                                    'content' => $page_source,
-                                    'url' => $current_url,
-                                    'download' => [
-                                        'file_name' => $file_name,
-                                        'file_size' => $file_size,
-                                        'file_content_base64' => $file_base64,
-                                        'file_deleted' => true
-                                    ]
-                                ], 200);
-
-                            } catch (Exception $file_error) {
-                                // Si hay error leyendo el archivo, intentar eliminarlo de todas formas
-                                if (file_exists($downloaded_file)) {
-                                    unlink($downloaded_file);
-                                }
-
-                                return response()->json([
-                                    'success' => false,
-                                    'error' => 'FILE_READ_ERROR',
-                                    'message' => 'Error al leer el archivo descargado: ' . $file_error->getMessage(),
-                                    'content' => $page_source,
-                                    'url' => $current_url
-                                ], 500);
-                            }
-
-                        } else {
-                            return response()->json([
-                                'success' => true,
-                                'message' => 'Consulta realizada exitosamente pero no se pudo descargar el archivo',
-                                'content' => $page_source,
-                                'url' => $current_url,
-                                'download' => null
-                            ], 200);
-                        }
-                    } catch (Exception $e) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Consulta realizada exitosamente pero error en descarga: ' . $e->getMessage(),
-                            'content' => $page_source,
-                            'url' => $current_url,
-                            'download' => null
-                        ], 200);
-                    }
-
-                } else {
-                    return response()->json([
-                        'success' => true,
-                        'message' => 'Consulta realizada exitosamente pero no se encontró el botón de imprimir',
-                        'content' => $page_source,
-                        'url' => $current_url,
-                        'download' => null
-                    ], 200);
-                }*/
             }
 
             if (strpos($page_source, 'error') !== false ||
@@ -350,5 +241,57 @@ class RecaptchaAnsesController extends Controller
                 $this->driver->quit();
             }
         }
+    }
+
+    function informe_seccion_VL_CO_ANSESAUTOMATIZATION_procesar_CODEM(string $per_cuit, array $params)
+    {
+        $url = 'http://servicioswww.anses.gob.ar/ooss2/ConsultaOOSS.aspx';
+        $postFields = http_build_query([
+            'g-recaptcha-response' => $params['recaptcha'],
+            '__VIEWSTATE' => $params['__VIEWSTATE'],
+            '__EVENTVALIDATION' => $params['__EVENTVALIDATION'],
+            '__VIEWSTATEGENERATOR' => $params['__VIEWSTATEGENERATOR'],
+            '__EVENTTARGET' => 'ctl00$ContentPlaceHolder1$DGOOSS$ctl02$ctl00',
+            '__EVENTARGUMENT' => $params['__EVENTARGUMENT'],
+            'txtCUIT' => $per_cuit,
+            'btnContinuar' => 'Continuar'
+        ]);
+
+        $headers = [
+            'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'Accept-Encoding: gzip, deflate, br',
+            'Accept-Language: es-419,es;q=0.9',
+            'Cache-Control: max-age=0',
+            'Content-Type: application/x-www-form-urlencoded',
+            'Origin: http://servicioswww.anses.gob.ar',
+            'Referer: http://servicioswww.anses.gob.ar/ooss2/',
+            'Sec-Ch-Ua: "Brave";v="117", "Not;A=Brand";v="8", "Chromium";v="117"',
+            'Sec-Ch-Ua-Mobile: ?0',
+            'Sec-Ch-Ua-Platform: "Linux"',
+            'Sec-Fetch-Dest: document',
+            'Sec-Fetch-Mode: navigate',
+            'Sec-Fetch-Site: same-origin',
+            'Sec-Fetch-User: ?1',
+            'Upgrade-Insecure-Requests: 1',
+            'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
+            'Cookie: ' . $params['cookies'],
+        ];
+
+        $ch = curl_init();
+
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $postFields,
+            CURLOPT_HTTPHEADER => $headers,
+            CURLOPT_ENCODING => '',
+        ]);
+
+        $response = curl_exec($ch);
+        $this->driver->quit();
+        curl_close($ch);
+        dd($response);
+        return $response;
     }
 }
