@@ -54,4 +54,15 @@ class ChromeSimulator
         }
     }
 
+    public function getCookies($driver): string
+    {
+        $cookies = $driver->manage()->getCookies();
+        $cookieStrings = array();
+        foreach ($cookies as $cookie) {
+            $cookieStrings[] = $cookie['name'] . '=' . $cookie['value'];
+        }
+
+        return implode('; ', $cookieStrings);
+    }
+
 }
