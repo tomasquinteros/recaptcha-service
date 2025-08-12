@@ -1,12 +1,8 @@
 <?php
 
-use App\Http\Controllers\RecaptchaAnsesController;
+use App\Http\Controllers\Anses\LaboralController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('recaptcha')->group(function () {
-
-    Route::prefix('anses')->group(function () {
-        Route::get('VL_CO/{per_cuit}', [RecaptchaAnsesController::class, 'VL_CO']);
-    });
-
+Route::prefix('anses')->group(function () {
+    Route::get('laboral/VL_CO/{per_cuit}', [LaboralController::class, 'VL_CO']);
 });
