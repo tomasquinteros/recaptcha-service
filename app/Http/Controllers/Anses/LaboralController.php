@@ -8,10 +8,6 @@ use Exception;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
-use Facebook\WebDriver\WebDriverKeys;
-use Facebook\WebDriver\WebDriverSelect;
-use Illuminate\Support\Facades\Http;
-use Log;
 
 class LaboralController extends Controller
 {
@@ -38,59 +34,49 @@ class LaboralController extends Controller
             $this->driver = RemoteWebDriver::create($this->selenium_url, $capabilities);
             // 2. Le decimos que URL debe ir
 
-$this->driver->get("https://servicioswww.anses.gob.ar/censite/index.aspx");
+            $this->driver->get('https://tramites.renaper.gob.ar/mi_ejemplar/');
+            // 3. Remover detectores de WebDriver
+            $this->driver->executeScript("
+                 Object.defineProperty(navigator, 'webdriver', {
+                     get: () => undefined,
+                 });
+                 delete navigator.__webdriver_script_fn;
+                 window.chrome = {
+                     runtime: {}
+                 };
+             ");
+            $cookies = $this->driver->manage()->getCookies();
+            $cookieString = '';
+            if (!empty($cookies)) {
+                foreach ($cookies as $c) {
+                    $cookieString .= $c['name'] . '=' . $c['value'] . ';';
+                }
+                $cookieString = rtrim($cookieString, ';');
+            }
 
-// Esperar a que cargue
-sleep(2); // o usar WebDriverExpectedCondition para elementos específicos
-
-// Leer cookies que el servidor ya puso
-$cookies = $this->driver->manage()->getCookies();
-
-$cookieString = '';
-foreach ($cookies as $c) {
-    $cookieString .= $c['name'].'='.$c['value'].';';
-}
-$cookieString = rtrim($cookieString, ';');
-
-echo "Cookies: $cookieString\n";
-exit;
-$this->driver->quit();
-
-            // $this->driver->get('https://tramites.renaper.gob.ar/mi_ejemplar/');
-            // // 3. Remover detectores de WebDriver
-            // $this->driver->executeScript("
-            //     Object.defineProperty(navigator, 'webdriver', {
-            //         get: () => undefined,
-            //     });
-            //     delete navigator.__webdriver_script_fn;
-            //     window.chrome = {
-            //         runtime: {}
-            //     };
-            // ");
-            // $cookies = $this->driver->manage()->getCookies();
-            // // 1. Esperar al iframe de reCAPTCHA
-            // $iframe = $this->driver->wait(1)->until(
-            //     WebDriverExpectedCondition::presenceOfElementLocated(
-            //         WebDriverBy::cssSelector("iframe[src*='recaptcha']")
-            //     )
-            // );
-            // // 2. Cambiar el contexto al iframe
-            // $this->driver->switchTo()->frame($iframe);
-            // // 3. Buscar el input hidden con el token
-            // $tokenInput = $this->driver->wait(1)->until(
-            //     WebDriverExpectedCondition::presenceOfElementLocated(
-            //         WebDriverBy::cssSelector("#recaptcha-token")
-            //     )
-            // );
-            // $tokenValue = $tokenInput->getAttribute("value");
-            // $this->driver->switchTo()->defaultContent();
-            // if (empty($tokenValue)) throw new \Exception('No se encontro el captcha');
-            // $this->driver->quit();
-            // return response()->json([
-            //     'success' => true,
-            //     'token' => $tokenValue,
-            //     'cookies' => $cookies
-            // ]);
+            // 1. Esperar al iframe de reCAPTCHA
+            $iframe = $this->driver->wait(1)->until(
+                WebDriverExpectedCondition::presenceOfElementLocated(
+                    WebDriverBy::cssSelector("iframe[src*='recaptcha']")
+                )
+            );
+            // 2. Cambiar el contexto al iframe
+            $this->driver->switchTo()->frame($iframe);
+            // 3. Buscar el input hidden con el token
+            $tokenInput = $this->driver->wait(1)->until(
+                WebDriverExpectedCondition::presenceOfElementLocated(
+                    WebDriverBy::cssSelector("#recaptcha-token")
+                )
+            );
+            $tokenValue = $tokenInput->getAttribute("value");
+            $this->driver->switchTo()->defaultContent();
+            if (empty($tokenValue)) throw new \Exception('No se encontro el captcha');
+            $this->driver->quit();
+            return response()->json([
+                'success' => true,
+                'token' => $tokenValue,
+                'cookies' => $cookieString
+            ]);
         } catch (Exception $e) {
             return response()->json([
                 'success' => false,
