@@ -52,18 +52,18 @@ RUN apt-get update && apt-get install -y \
 # Instalar Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Descargar e instalar Google Chrome desde zip (chrome-for-testing)
-RUN wget -O /tmp/chrome-linux64.zip https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.66/linux64/chrome-linux64.zip && \
-    unzip /tmp/chrome-linux64.zip -d /opt/ && \
-    rm /tmp/chrome-linux64.zip && \
-    ln -s /opt/chrome-linux64/chrome /usr/bin/google-chrome
-
-# Descargar e instalar ChromeDriver desde zip (chrome-for-testing)
-RUN wget -O /tmp/chromedriver-linux64.zip https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.66/linux64/chromedriver-linux64.zip && \
-    unzip /tmp/chromedriver-linux64.zip -d /tmp/ && \
-    mv /tmp/chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
-    chmod +x /usr/local/bin/chromedriver && \
-    rm -rf /tmp/chromedriver-linux64.zip /tmp/chromedriver-linux64
+## Descargar e instalar Google Chrome desde zip (chrome-for-testing)
+#RUN wget -O /tmp/chrome-linux64.zip https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.66/linux64/chrome-linux64.zip && \
+#    unzip /tmp/chrome-linux64.zip -d /opt/ && \
+#    rm /tmp/chrome-linux64.zip && \
+#    ln -s /opt/chrome-linux64/chrome /usr/bin/google-chrome
+#
+## Descargar e instalar ChromeDriver desde zip (chrome-for-testing)
+#RUN wget -O /tmp/chromedriver-linux64.zip https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.66/linux64/chromedriver-linux64.zip && \
+#    unzip /tmp/chromedriver-linux64.zip -d /tmp/ && \
+#    mv /tmp/chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
+#    chmod +x /usr/local/bin/chromedriver && \
+#    rm -rf /tmp/chromedriver-linux64.zip /tmp/chromedriver-linux64
 
 # Configurar Apache para Laravel
 RUN a2enmod rewrite

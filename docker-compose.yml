@@ -1,10 +1,24 @@
-version: '3.8'
-
 services:
+  selenium-chrome:
+    image: selenium/standalone-chrome:latest # Or a specific version like selenium/standalone-chrome:127.0
+    container_name: selenium-standalone-chrome
+    ports:
+      - "4444:4444" # Expose Selenium Grid port
+      - "7900:7900" # Expose VNC port for debug image, if used
+    shm_size: 2gb # Recommended for browser performance
+    environment:
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true # Optional: Allow overriding max sessions
+      - SE_NODE_MAX_SESSIONS=1 # Optional: Set max sessions for the node
+      - SE_EVENT_BUS_HOST=selenium-chrome # For standalone, the event bus is within the container
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - VNC_NO_PASSWORD=1
+    networks:
+        - shared_network
   laravel:
     build: .
     ports:
-      - "8001:80"
+      - "8008:80"
     volumes:
       - .:/var/www/html
     environment:
@@ -14,6 +28,8 @@ services:
         - APP_DEBUG=true
     networks:
       - shared_network
+    depends_on:
+        -   selenium-chrome
 networks:
   shared_network:
     external: true
