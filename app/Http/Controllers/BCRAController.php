@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Anses;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\ChromeSimulator;
@@ -11,7 +11,7 @@ use Facebook\WebDriver\WebDriverExpectedCondition;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
-class LaboralController extends Controller
+class BCRAController extends Controller
 {
     private $driver;
     private string $selenium_url;
@@ -30,11 +30,9 @@ class LaboralController extends Controller
         try {
             // 1. Configurar y crear driver
             $capabilities = $this->chromeSimulator->setupChrome();
-
             $this->driver = RemoteWebDriver::create($this->selenium_url, $capabilities);
             // 2. Le decimos que URL debe ir
-
-            $this->driver->get('https://tramites.renaper.gob.ar/mi_ejemplar/');
+            $this->driver->get('https://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp');
             // 3. Remover detectores de WebDriver
             $this->driver->executeScript("
                  Object.defineProperty(navigator, 'webdriver', {
@@ -53,50 +51,10 @@ class LaboralController extends Controller
                 }
                 $cookieString = rtrim($cookieString, ';');
             }
-            $tokenCRSF = $this->driver->findElement(WebDriverBy::name("token-crsf"));
-
-            // 1. Esperar al iframe de reCAPTCHA
-            $iframe = $this->driver->wait(1)->until(
-                WebDriverExpectedCondition::presenceOfElementLocated(
-                    WebDriverBy::cssSelector("iframe[src*='recaptcha']")
-                )
-            );
-            // 2. Cambiar el contexto al iframe
-            $this->driver->switchTo()->frame($iframe);
-            // 3. Buscar el input hidden con el token
-            $tokenInput = $this->driver->wait(1)->until(
-                WebDriverExpectedCondition::presenceOfElementLocated(
-                    WebDriverBy::cssSelector("#recaptcha-token")
-                )
-            );
-            $tokenValue = $tokenInput->getAttribute("value");
-            $this->driver->switchTo()->defaultContent();
-            dd($this->driver->getPageSource());
-            if (empty($tokenValue)) throw new \Exception('No se encontro el captcha');
-            $this->driver->quit();
-
-            $response = Http::withHeaders([
-                'Accept' => '*/*',
-                'Origin' => 'https://tramites.renaper.gob.ar',
-                'Referer' => 'https://tramites.renaper.gob.ar/mi_ejemplar/',
-                'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
-            ])
-                ->timeout(30)
-                ->asMultipart()
-                ->post('https://tramites.renaper.gob.ar/mi_ejemplar/busqueda.php', [
-                    'dni' => $request->dni,
-                    'tipodoc' => $request->tipoDoc,
-                    'fecha' => $request->fecha,
-                    'token' => $tokenValue,
-                    'action' => 'submit_tramite'
-            ]);
-
-            dd($response->body());
 
             return response()->json([
                 'success' => true,
-                'token' => $tokenValue,
-                'cookies' => $cookieString
+                'image' => $image,
             ]);
         } catch (Exception $e) {
             return response()->json([
