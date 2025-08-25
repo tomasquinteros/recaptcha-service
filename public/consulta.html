@@ -1,0 +1,5488 @@
+
+
+
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72541502-1', 'auto');
+  ga('send', 'pageview');
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N969B5K');
+</script>
+
+
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<title>Resultado situación crediticia CUIT/CUIL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <meta name="description" content="">
+	<meta name="keywords" content="">
+
+    <!--[if lt IE 9]><script src="./JS/html5.js"></script>
+	<![endif]-->
+
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="../Includescomunes/estilos-generales/css/color-theme.css"/>
+
+	<link rel="stylesheet" href="../Includescomunes/estilos-generales/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Includescomunes/estilos-generales/font-awesome/css/font-awesome.min.css"/>
+
+	<script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+<!--Inicio Inclusite-->
+
+
+
+<!--Fin Inclusite-->
+
+
+
+
+
+
+<script type="text/javascript">
+	function imprTab(){
+		Imprime.style.visibility = 'hidden';
+		Logobcra.style.display = 'inline';
+		btncon.style.display = 'none';
+
+		var divToPrint=document.getElementById("aimprimir");
+		var newWin= window.open("");
+		newWin.document.write('<html><head><link href="../estilos/estilos.css" rel="stylesheet" type="text/css" media="all"></head><body onLoad="window.print(); window.close();">' + divToPrint.innerHTML + '</body></html>');
+		newWin.document.close();
+
+		Imprime.style.visibility = 'visible';
+		Logobcra.style.display = 'none';
+		btncon.style.display = 'inline';
+	}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+	<div class="containner">
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".popover-top").popover({
+                trigger: 'hover', placement : 'top'
+                });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".dropdown").focus(
+                function() {
+                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+                    $(this).toggleClass('open');
+                },
+                function() {
+                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+                    $(this).toggleClass('open');
+                }
+            );
+
+            /*Este es el código que hace funcionar el hover*/
+            /*
+            $('li.dropdown-submenu').hover(function() {
+                $(this).find('.dropdown-submenu2').stop(true, true).fadeIn("fast");
+            }, function() {
+                $(this).find('.dropdown-submenu2').stop(true, true).fadeOut("slow");
+            });
+            */
+
+            $("li.dropdown-submenu").click(
+                function() {
+                    $(this).find('> ul').slideToggle();
+                }
+            );
+            $("li.dropdown-submenu").click(
+                function(e) {
+                    e.stopPropagation()
+                }
+            );
+
+
+        /*FIN del código que hace funcionar el hover, ojo que deben quedar dentro del corchete y paréntesis final */
+        });
+    </script>
+
+
+<div class="topnav-barra">
+	<div class="AL-encabezado">
+		<span class="ayuda">
+			<a href="../Varios/Ayuda_en_linea.asp" onclick="ga('send', 'event', 'Principal', 'Click', 'AD-Ayuda en Linea, '0');">Ayuda en línea</a>
+		</span>
+		<span class="redes">
+			<span-AL><a href="../Varios/buscador-interno-temporario.asp" onclick="ga('send', 'event', 'Principal', 'Click', 'AD-English', '0');">Buscar</a></span-AL>
+
+			<span-FB><a href="https://www.facebook.com/BancoCentralAR/" onclick="ga('send', 'event', 'Principal', 'Click', 'AD-Facebook, '0');" target="_blank"><i class="fa fa-facebook" style="color:white"></i></a></span-FB>
+			<span-LE><a href="https://www.instagram.com/bancocentral_ar/?hl=es-la" target="_blank"><i class="fa fa-instagram" style="color:white"></i></a></span-LE>
+			<span-LE><a href="https://www.linkedin.com/company/bcra" target="_blank"><i class="fa fa-linkedin" style="color:white"></i></a></span-LE>
+			<span-TW><a href="https://twitter.com/bancocentral_ar" onclick="ga('send', 'event', 'Principal', 'Click', 'AD-twitter, '0');" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" style="fill:white; translate: 0px 3px" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></span-TW>
+			<span-YT><a href="https://www.youtube.com/@BancoCentral_AR" onclick="ga('send', 'event', 'Principal', 'Click', 'AD-Youtube, '0');" target="_blank"><i class="fa fa-youtube" style="color:white"></i></a></span-YT>
+			<span-AL><a href="../Varios/English_information.asp" onclick="ga('send', 'event', 'Principal', 'Click', 'AD-English', '0');">ENG</a></span-AL>
+		</span>
+	</div>
+</div>
+
+<a href="../default.asp"><img src="../Imagenes/header/encabezado.jpg" width="100%" height="auto" class="img-fluid"></a>
+
+	<!-- MENÚ -->
+
+    <nav class="navbar navbar-default navbar-static" style="" role="navigation">
+        <div class="navbar-header">
+    		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+    			<span class="sr-only">Menú</span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    		</button>
+    	</div>
+
+	   <div class="collapse navbar-collapse js-navbar-collapse">
+		  <ul class="nav navbar-nav">
+            <!-- BOTÓN INSTITUCIONAL -->
+			<li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle botonera" data-toggle="dropdown">Institucional</a>
+				<ul class="dropdown-menu dropdown-menu-large row"><!-- -->
+				    <li class="col-sm-4">
+						<ul class="boxLista">
+							<li class="dropdown-header">MISIÓN</li>
+                            <li><a href="../Institucional/Carta_Organica.asp">Carta Orgánica</a></li>
+                            <li><a href="../Institucional/Objetivos_y_Planes.asp">Objetivos y planes</a></li>
+                            <li><a href="../Institucional/Rendicion_Cuentas.asp">Rendición de cuentas</a></li>
+                            <li><a href="../Institucional/Acceso_Informacion.asp">Acceso a la Información Pública</a></li>
+                        </ul>
+						<ul class="boxLista">
+						    <li class="dropdown-header">CÓMO FUNCIONA</li>
+                            <li><a href="../Institucional/Autoridades.asp">Autoridades</a></li>
+                            <li><a href="../Institucional/Estructura.asp">Estructura y funciones</a></li>
+                            <li><a href="../Institucional/Comisiones_del_Directorio.asp">Comisiones del Directorio </a></li>
+                            <li><a href="../Institucional/Codigo_de_Etica.asp">Código de Ética para el Personal</a> </li>
+							  <li><a href="../Institucional/manual-estilo-para-proyectos-resolucion-directorio.asp">Manual de Estilo para Proyectos de Resolución</a> </li>
+                   		</ul>
+					</li>
+					<li class="col-sm-4">
+						<ul class="boxLista">
+                            <li class="dropdown-header">ACUERDOS</li>
+                            <li><a href="../Institucional/Acuerdos_Nacionales.asp">Nacionales</a></li>
+                            <li><a href="../Institucional/Acuerdos_Internacionales.asp">Internacionales</a></li>
+                        </ul>
+
+                        <ul class="boxLista">
+							<li class="dropdown-header">ACTIVIDAD ACADÉMICA</li>
+                            <li><a href="../Institucional/Jornadas_monetarias_bancarias.asp">Jornadas y conferencias</a></li>
+                            <li><a href="../Institucional/Seminarios_de_economia.asp">Seminarios de Economía</a></li>
+                            <li><a href="../Institucional/Premio_de_investigacion.asp">Premio Anual de Investigación Económica</a></li>
+						</ul>
+						<!--ul class="boxLista">
+							<li class="dropdown-header">PRENSA</li>
+                             <li>
+                                <form action="../Institucional/Prensa.asp" method="POST" name="formComPre">
+                                    <a onClick="formComPre.submit()">Comunicados de prensa</a>
+                                    <input type="hidden" name="tipo" value="2"/>
+                                </form>
+                            </li>
+
+                            <li>
+                                <form action="../Institucional/Prensa.asp" method="POST" name="formComP">
+                                    <input type="hidden" name="tipo" value="1"/>
+                                    <a onClick="formComP.submit()">Comunicados P</a>
+                                </form>
+                            </li>
+
+                            <li>
+                                <form action="../Institucional/Prensa.asp" method="POST" name="formPolMonLeb">
+                                    <input type="hidden" name="tipo" value="5"/>
+                                    <a onClick="formPolMonLeb.submit()">Comunicados de Política Monetaria y de licitaciones de letras</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form action="../Institucional/Prensa.asp" method="POST" name="formDiscPre">
+                                    <a onClick="formDiscPre.submit()"> Discursos y presentaciones</a>
+                                    <input type="hidden" name="tipo" value="4"/>
+                                </form>
+                            </li>
+
+                            <li><a href="../Institucional/Contacto-para-Periodistas.asp">Contacto para periodistas</a></li>
+						</ul -->
+					</li>
+					<li class="col-sm-4">
+						<ul class="boxLista">
+                            <li class="dropdown-header">PROVEEDORES</li>
+                          	<li><a href="../Institucional/Portal-proveedores.asp">Información sobre el Portal de Proveedores</a></li>
+							<li><a href="https://ps.bcra.gob.ar/psp/sup/SUPPLIER/ERP/h/?tab=DEFAULT">Acceso al Portal de Proveedores</a></li>
+							<li><a href="../Institucional/Proveedores-instructivos-oferta-electronica.asp">Instructivos para presentar ofertas electrónicas</a></li>
+
+
+						</ul>
+                        <ul class="boxLista">
+                            <li class="dropdown-header">MÁS SOBRE EL BCRA</li>
+                            <li><a href="../Institucional/Historia.asp">Historia</a></li>
+                            <li><a href="../Institucional/Presidentes_Anteriores.asp">Presidencias anteriores</a></li>
+                            <li><a href="../Institucional/Patrimonio_Arquitectonico.asp">Patrimonio arquitectónico</a></li>
+                            <li><a href="../Institucional/premio-pintura-bcra-PNP.asp">Premio Nacional de Pintura Banco Central</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+            <!-- BOTÓN POLÍTICA MONETARIA -->
+				<li class="dropdown dropdown-large">
+
+				 <a href="#" class="dropdown-toggle botonera" data-toggle="dropdown">Política Monetaria </a>
+				<ul class="dropdown-menu dropdown-menu-large row">
+					<!--<li class="col-sm-4">
+						<ul class="boxLista">
+                            <li><a href="../PoliticaMonetaria/Politica_Monetaria.asp">Lineamientos de política monetaria</a></li>
+						</ul>
+                    </li>-->
+
+					<li class="col-sm-4">
+						<ul class="boxLista">
+
+							<li><a href="../PoliticaMonetaria/comunicados.asp">Comunicados de Política Monetaria</a></li>
+						</ul>
+                    </li>
+                   <li class="col-sm-4">
+						<ul class="boxLista">
+                            <li><a href="../PublicacionesEstadisticas/Informe_politica_monetaria.asp">Informe de Política Monetaria</a></li>
+						</ul>
+                    </li>
+
+				</ul>
+			</li>
+
+
+            <!-- BOTÓN SISTEMA FINANCIERO -->
+		<li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle botonera" data-toggle="dropdown">Sistema Financiero</a>
+				<ul class="dropdown-menu dropdown-menu-large row">
+					<li class="col-sm-4">
+						<ul class="boxLista">
+							<li class="dropdown-header"> SOBRE ENTIDADES FINANCIERAS</li>
+                            <li><a href="../SistemasFinancierosYdePagos/Entidades_financieras.asp">Por entidad</a></li>
+                            <li class="dropdown-submenu">Por grupo
+                            	  <ul class="dropdown-submenu">
+                                    <li><a href="../SistemasFinancierosYdePagos/Sistema_financiero.asp?opcion=2&tit=2">Públicas</a></li>
+                                    <li><a href="../SistemasFinancierosYdePagos/Sistema_financiero.asp?opcion=3&tit=3">Privadas</a></li>
+                                    <li><a href="../SistemasFinancierosYdePagos/Sistema_financiero.asp?opcion=5&tit=5">Compañías financieras</a></li>
+                                    <!--<li><a href="../SistemasFinancierosYdePagos/Sistema_financiero.asp?opcion=6&tit=6">Cajas de crédito</a></li>-->
+                                    <li><a href="../SistemasFinancierosYdePagos/Sistema_financiero.asp?opcion=1&tit=1">Sistema Financiero</a></li>
+                                    <li><a href="../SistemasFinancierosYdePagos/Sistema_financiero.asp?opcion=4&tit=4">Primeros 10 bancos privados</a></li>
+                            	 </ul>
+                            </li>
+
+                            <li><a href="../SistemasFinancierosYdePagos/Entidades_en_liquidacion.asp">Entidades en Liquidación</a></li>
+							<!--<li><a href="../SistemasFinancierosYdePagos/ex-entidades-financieras.asp">Ex entidades</a></li>-->
+
+                        </ul>
+                    	<ul class="boxLista">
+							<li class="dropdown-header"> SOBRE ENTIDADES NO FINANCIERAS</li>
+							<li>Registro de operadores de cambio:</li>
+							<li class="dropdown-submenu">Agencias de cambio
+								<ul class="dropdown-submenu">
+									<li>
+										<a href="../SistemasFinancierosYdePagos/Agencias_de_cambio.asp">Listado con domicilios legales </a>
+									</li>
+									<li>
+										<a href="../SistemasFinancierosYdePagos/Agencias_de_cambio_dependencias.asp">Listado de dependencias operativas </a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">Casas de cambio
+								<ul class="dropdown-submenu">
+									<li>
+										<a href="../SistemasFinancierosYdePagos/Casas_de_cambio.asp">Listado con domicilios legales </a>
+									</li>
+									<li>
+										<a href="../SistemasFinancierosYdePagos/Casas_de_cambio_dependencias.asp">Listado de dependencias operativas </a>
+									</li>
+								</ul>
+							</li>
+							<br>
+							<li>Otros registros:</li>
+							<li><a href="../SistemasFinancierosYdePagos/Proveedores-servicios-de-billeteras-digitales-Interoperables.asp">Billeteras digitales interoperables</a></li>
+					<li><a href="../SistemasFinancierosYdePagos/Emisoras_tarjetas_credito_compra.asp">Empresas no financieras emisoras de tarjetas de crédito o compra</a></li>
+
+							<li><a href="../SistemasFinancierosYdePagos/Registro_exportadores_importadores.asp">Información cambiaria de exportadores e importadores de bienes </a></li>
+							<li><a href="../SistemasFinancierosYdePagos/Fondos-de-garantia-de-caracter-publico.asp">Fondos de Garantía de Carácter Público</a></li>
+
+							<li><a href="../SistemasFinancierosYdePagos/Proveedores-servicios-de-creditos.asp">Proveedores de servicios de crédito entre particulares a través de plataformas </a></li>
+
+							<li><a href="../SistemasFinancierosYdePagos/Proveedores-servicios-de-pago-ofrecen-cuentas-de-pago.asp"> Proveedores de servicios de pago</a></li>
+
+							<li><a href="../SistemasFinancierosYdePagos/Plataformas_financiamiento_MiPyME.asp"> Registro de Plataformas para el Financiamiento MiPyME</a></li>
+
+							<li><a href="../SistemasFinancierosYdePagos/Proveedores_no_financieros.asp">Otros proveedores no financieros</a>	</li>
+
+
+
+							<li><a href="../SistemasFinancierosYdePagos/Sociedades_garantia_reciproca.asp">Sociedades de Garantía Recíproca</a></li>
+							<li><a href="../SistemasFinancierosYdePagos/Transportadoras_de_caudales.asp">Transportadoras de caudales</a></li>
+
+
+							<li><a href="../SistemasFinancierosYdePagos/Fideicomisos_financieros.asp">Fideicomisos Financieros</a></li>
+							<li class="pepe"><a href="../SistemasFinancierosYdePagos/Representantes_entidades_financieras_del_exterior.asp">Representantes de entidades financieras del exterior</a></li>
+
+
+
+                        </ul>
+
+
+
+
+
+					</li>
+
+					<li class="col-sm-4">
+
+						<ul class="boxLista">
+							<li class="dropdown-header">POLÍTICA FINANCIERA</li>
+                            <li><a href="../SistemasFinancierosYdePagos/Politica_Financiera.asp#a">Estabilidad Financiera</a></li>
+                            <li><a href="../SistemasFinancierosYdePagos/Politica_Financiera.asp#b">Desarrollo y eficiencia</a></li>
+                            <li><a href="../SistemasFinancierosYdePagos/Politica_Financiera.asp#c">Inclusión Financiera</a></li>
+						</ul>
+
+
+							<ul class="boxLista">
+							<li class="dropdown-header"><a href="../SistemasFinancierosYdePagos/Innovacion_financiera.asp ">INNOVACIÓN FINANCIERA</a></li>
+                        </ul>
+
+						<ul class="boxLista">
+							<li class="dropdown-header"><a href="../SistemasFinancierosYdePagos/finanzas-sostenibles-riesgos-clima.asp">FINANZAS SOSTENIBLES Y RIESGOS FINANCIEROS RELACIONADOS CON EL CLIMA</a></li>
+                        </ul>
+
+
+
+						<ul class="boxLista">
+							<li class="dropdown-header">CIBERSEGURIDAD</li>
+							<li><a href="../SistemasFinancierosYdePagos/Ciberseguridad.asp#Regulación">Regulación</a></li>
+							<li><a href="../SistemasFinancierosYdePagos/Ciberseguridad.asp#Lineamientos%20de%20Ciberseguridad">Lineamientos de Ciberseguridad</a></li>
+							<li><a href="../SistemasFinancierosYdePagos/Ciberseguridad.asp#Glosario">Glosario</a></li>
+						</ul>
+
+							<ul class="boxLista">
+
+                            <li><a href="../PublicacionesEstadisticas/Advertencia-sobre-criptoactivos.asp">CRIPTOACTIVOS</a></li>
+
+						</ul>
+
+
+
+
+					</li>
+					<li class="col-sm-4">
+
+
+						<ul class="boxLista">
+                            <li class="dropdown-header">MARCO LEGAL Y NORMATIVO</li>
+                            <li><a href="../SistemasFinancierosYdePagos/Buscador_de_comunicaciones.asp">Buscador de comunicaciones</a></li>
+                            <li><a href="../SistemasFinancierosYdePagos/Ordenamiento_y_resumenes.asp">Ordenamientos y resúmenes</a></li>
+                            <li><a href="../SistemasFinancierosYdePagos/Aplicativos.asp">Aplicativos</a></li>
+                            <li><a href="../SistemasFinancierosYdePagos/Interpretaciones_preguntas.asp">Interpretaciones y preguntas</a></li>
+                            <li><a href="../SistemasFinancierosYdePagos/Sumarios-financieros-2025.asp">Sumarios Financieros</a></li>
+                            <li><a href="../SistemasFinancierosYdePagos/Regulaciones_exterior_y_cambios.asp">Normativa de Exterior y Cambios</a></li>
+                           <li><a href="../SistemasFinancierosYdePagos/Relevamiento_activos_y_pasivos_externos.asp">Relevamiento de activos y pasivos externos</a></li>
+
+							<li><a href="../SistemasFinancierosYdePagos/Entidades_de_importancia_sistemica.asp">Entidades de Importancia Sistémica</a></li>
+							<li><a href="../SistemasFinancierosYdePagos/RRII-preguntas-frecuentes.asp">Consultas frecuentes sobre Régimen Informativo</a></li>
+						</ul>
+
+							<ul class="boxLista">
+							<li class="dropdown-header"><a href="../SistemasFinancierosYdePagos/Guías-de-supervisión.asp">GUÍAS DE SUPERVISIÓN</a></li>
+                        </ul>
+
+						<ul class="boxLista">
+							<li class="dropdown-header"><a href="../sistemasFinancierosYdePagos/tramites_entidades_financieras_y_no_financieras.asp">Trámites</a></li>
+                        </ul>
+
+					</li>
+				</ul>
+			</li>
+            <!-- BOTÓN MEDIOS DE PAGO -->
+            <li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle botonera" data-toggle="dropdown">Medios de Pago</a>
+				<ul class="dropdown-menu dropdown-menu-large row">
+                	<li class="col-sm-4">
+						<ul class="boxLista">
+							<li class="dropdown-header"><a href="../MediosPago/Sistema_de_Pago.asp">SISTEMA DE PAGOS</a></li>
+                        </ul>
+                        <ul class="boxLista">
+                            <li class="dropdown-header">BILLETES Y MONEDAS</li>
+							<li><a href="../MediosPago/Emisiones_vigentes.asp">Emisiones vigentes</a></li>
+							<!--<li><a href="../MediosPago/Nueva_familia_billetes.asp">Billetes de la República Argentina</a></li>
+                            <li><a href="../MediosPago/Nueva_familia_monedas.asp">Monedas de la República Argentina</a></li>-->
+							<!--<li><a href="../MediosPago/Cambio_monedas_billetes.asp">Cambio de monedas y billetes</a></li>-->
+							<li><a href="../MediosPago/Emisiones_anteriores.asp">Emisiones anteriores</a></li>
+							<li><a href="../MediosPago/Emisiones_conmemorativas.asp">Emisiones conmemorativas</a></li>
+                   		</ul>
+					</li>
+				<li class="col-sm-4">
+						<ul class="boxLista">
+							<li class="dropdown-header"><a href="../MediosPago/Politica_Pagos.asp">POLÍTICA DE PAGOS</a></li>
+							<li><a href="../MediosPago/Politica_Pagos.asp#efectivo">Efectivo</a></li>
+
+
+
+
+				<!--	<li class="dropdown-submenu" id="segundo">-->
+							<li><a href="../MediosPago/Politica_Pagos.asp#electronicos">Pagos electrónicos</a>
+							   <ul class="dropdown-submenu">
+								 <li><a href="../MediosPago/Transferencias-3-0.asp">Transferencias 3.0</a></li>
+                              	 <li><a href="/MediosPago/Clave-Bancaria-Uniforme.asp">Clave Bancaria Uniforme (CBU)</a></li>
+                                 <li><a href="/MediosPago/Clave-Virtual-Uniforme.asp">Clave Virtual Uniforme (CVU)</a></li>
+								 <li><a href="../MediosPago/Alias-CBU.asp">Alias CBU</a></li>
+								 <li><a href="../MediosPago/Alias-CVU.asp">Alias CVU</a></li>
+								 <li><a href="../MediosPago/Debin.asp"> DEBIN | Débito Inmediato </a></li>
+								 <li><a href="../MediosPago/Echeq.asp">ECHEQ | Cheque Electrónico</a></li>
+							     <li><a href="../MediosPago/Tarjeta-de-debito.asp">Tarjeta de débito</a></li>
+                             		<!--<li><a href="../MediosPago/Politica_Pagos.asp#g">Transferencias por montos superiores</a></li>-->
+							  </ul>
+						    </li>	</ul>
+
+					</li>
+
+
+					<li class="col-sm-4">
+						<ul class="boxLista">
+                            <li class="dropdown-header"><a href="../MediosPago/Regulacion_de_pagos.asp">REGULACIÓN DE PAGOS</a></li>
+                        </ul>
+
+
+						<ul class="boxLista">
+                            <li class="dropdown-header">CONVENIOS INTERNACIONALES DE PAGO </li>
+							<li><a href="../MediosPago/Convenio-de-Pagos-Creditos-Reciprocos-ALADI.asp">Convenio de Pagos y Créditos Recíprocos - ALADI</a></li>
+							<li><a href="../MediosPago/Sistema_de_Pagos_en_Moneda_Local-SML.asp">Sistema de Pagos en Moneda Local (SML)</a></li>
+                        </ul>
+					</li>
+				</ul>
+			</li>
+
+
+            <!-- BOTÓN PUBLICACIONES -->
+			<li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle botonera" data-toggle="dropdown">Publicaciones</a>
+				<ul class="dropdown-menu dropdown-menu-large row"><!-- -->
+					<li class="col-sm-4">
+						<ul class="boxLista">
+						<!--	<li class="dropdown-header">PUBLICACIONES</li>-->
+                            <li class="dropdown-header">Política monetaria</li>
+
+                                    <li><a href="../PublicacionesEstadisticas/Informe_politica_monetaria.asp">Informe de Política Monetaria</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Informe_monetario_mensual.asp">Informe Monetario Mensual</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Informe_monetario_diario.asp">Informe Monetario Diario</a></li>
+
+
+
+
+
+						</ul>
+													<ul class="boxLista">
+
+                            <li class="dropdown-header">Estabilidad financiera</li>
+
+                                    <li><a href="../PublicacionesEstadisticas/Informe_de_estabilidad_financiera.asp">Informe de Estabilidad Financiera</a></li>
+                                	<li><a href="../PublicacionesEstadisticas/Informe_mensual_sobre_bancos.asp">Informe sobre Bancos</a></li>
+
+
+						</ul>
+													<ul class="boxLista">
+
+							<li class="dropdown-header">Sector externo </li>
+
+
+									<li><a href="../PublicacionesEstadisticas/Mercado_de_cambios.asp">Informe de la Evolución del Mercado de Cambios y Balance Cambiario</a></li>
+									<li> <a href="../PublicacionesEstadisticas/Deuda_externa_privada.asp">Informe sobre Deuda Externa Privada</a></li>
+									<li> <a href="../PublicacionesEstadisticas/informe-inversion-extranjera-directa.asp">Informe sobre Inversión Extranjera Directa </a></li>
+										 <li><a href="../PublicacionesEstadisticas/Guia-para-importadores.asp">BOPREAL | Guía para importadores </a>	</li>
+
+
+									<li> <a href="../PublicacionesEstadisticas/Informe-regimen-disponibilidad-divisas-para-inversores-extranjeros.asp">Informe sobre el Régimen de Disponibilidad de Divisas para Inversores Extranjeros </a></li>
+									<li> <a href="../PublicacionesEstadisticas/proyecciones-de-la-balanza-comercial-2024-2030.asp">Proyecciones de la balanza comercial 2024-2030 </a></li>
+									<li> <a href="../PublicacionesEstadisticas/pagos-deuda-externa-financiera-sector-privado.asp">Informe de Pagos de Deuda Externa Financiera del Sector Privado 2020-2022 </a></li>
+									<li><a href="../PublicacionesEstadisticas/Informe-mercado-cambios-deuda-formacion-activos-externos-2015-2019.asp">	Informe de Mercado de Cambios, Deuda y Formación de Activos Externos 2015-2019</a></li>
+
+
+
+
+
+
+
+
+
+
+
+						</ul>
+
+
+
+
+					</li>
+					<li class="col-sm-4">
+
+						<ul class="boxLista">
+
+							<li class="dropdown-header">Sistema financiero </li>
+                                    <li><a href="../PublicacionesEstadisticas/Entidades_financieras.asp">Entidades Financieras</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Entidades_no_financieras.asp">Entidades No Financieras</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Marco_Legal.asp">Marco Legal del Sistema Financiero</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Productos_Derivados_Financieros.asp">Productos Derivados Financieros</a></li>
+
+
+
+						</ul>
+                    	<ul class="boxLista">
+							<li class="dropdown-header">Inclusión Financiera</li>
+                                    <li><a href="../PublicacionesEstadisticas/Informe-Inclusion-Financiera.asp">Informe de Inclusión Financiera</a></li>
+                                   <li><a href="../PublicacionesEstadisticas/Informe-proveedores-no-financieros-credito.asp">Informe sobre  Proveedores No Financieros de Crédito</a></li>
+
+
+						</ul>
+
+
+						<ul class="boxLista">
+							<li class="dropdown-header">Usuarios Financieros</li>
+                                    <li><a href="../PublicacionesEstadisticas/Informe-protecion-personas-usuarias.asp"> Informe sobre Protección a las Personas Usuarias de Servicios Financieros</a></li>
+
+
+
+						</ul>
+
+							<ul class="boxLista">
+                            <li class="dropdown-header">Investigación económica </li>
+								<li><a href="../PublicacionesEstadisticas/Revista-Ensayos-economicos.asp">Revista Ensayos Económicos</a></li>
+								<li><a href="../PublicacionesEstadisticas/Estudios_economicos.asp">Estudios Económicos</a></li>
+
+                                    <li><a href="../PublicacionesEstadisticas/Documentos_Trabajo.asp">Documentos de Trabajo</a></li>
+									<li><a href="../PublicacionesEstadisticas/Notas-tecnicas.asp">Notas Técnicas</a></li>
+
+
+
+						</ul>
+
+						<!--<ul class="boxLista">
+							<li class="dropdown-header"><a href="https://www.centraldeideas.blog">BLOG | CENTRAL DE IDEAS</a></li>
+                        </ul>-->
+
+
+
+                    </li>
+					<li class="col-sm-4">
+
+								<ul class="boxLista">
+
+							<li class="dropdown-header">Medios de Pago</li>
+											<li><a href="../PublicacionesEstadisticas/Informe-pagos-minoristas.asp">Informe de Pagos Minoristas</a></li>
+
+
+
+						</ul>
+
+
+
+						<ul class="boxLista">
+
+                            <li><a href="../PublicacionesEstadisticas/Politicas-de-prevencion-del-La-Ft-Fp.asp">POLÍTICAS DE PREVENCIÓN DEL LA/FT/FP </a></li>
+
+						</ul>
+
+
+						<ul class="boxLista">
+
+                            <li><a href="../PublicacionesEstadisticas/Informe_anual_al_congreso.asp">Informe Anual al Congreso</a></li>
+
+
+
+
+						</ul>
+
+                    	<ul class="boxLista">
+
+
+							  <li class="dropdown-header">Balances</li>
+                                    <li><a href="../PublicacionesEstadisticas/balances_semanales.asp">Semanales</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/balances_anuales.asp">Anuales</a></li>
+
+
+						</ul>
+						                	<ul class="boxLista">
+												<li class="dropdown-header">MEMORIAS INSTITUCIONALES</li>
+							<li><a href="../PublicacionesEstadisticas/Memoria-Directorios-Legislacion-1935-2025.asp">Memoria Institucional: Directorios y Legislación del Sistema Financiero (1935-2025)</a></li>
+                            <li><a href="../PublicacionesEstadisticas/Memoria_anual.asp">Memoria Anual</a></li>
+
+
+						</ul>
+
+
+
+					</li>
+
+				</ul>
+			</li>
+
+            <!-- BOTÓN ESTADISTICAS -->
+						<li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle botonera" data-toggle="dropdown">Estadísticas</a>
+				<ul class="dropdown-menu dropdown-menu-large row">
+					<li class="col-sm-4">
+						<ul class="boxLista">
+                           <li class="dropdown-header"><a href="../PublicacionesEstadisticas/Principales_variables.asp">Principales variables</a></li>
+
+						</ul>
+							<ul class="boxLista">
+                        	  <li class="dropdown-header">Monetarias y financieras
+                                    <li><a href="../PublicacionesEstadisticas/Consultas_Personalizadas_Series_Estadisticas.asp">Consultas personalizadas de series estadísticas</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Cuadros_estandarizados_series_estadisticas.asp">Cuadros estandarizados de series estadísticas</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Boletin_estadistico.asp">Boletín Estadístico</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Metodologias.asp">Metodologías</a></li>
+
+                            </li>
+
+						</ul>
+
+
+
+					</li>
+					<li class="col-sm-4">
+                    	<ul class="boxLista">
+                             <li class="dropdown-header">Sector externo
+
+                                    <li><a href="../PublicacionesEstadisticas/Estadísticas_Mercado_de_cambios.asp">Evolución del Mercado de Cambios </a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Estadisticas_deuda_externa_privada.asp">Deuda Externa Privada</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Estadisticas-inversion-extranjera-directa.asp">Inversión Extranjera Directa </a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Libor.asp">Tasas LIBOR</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Precios_materias_primas.asp">Precios de Materias Primas</a></li>
+
+                            </li>
+							</ul>
+
+
+
+
+		   <ul class="boxLista">
+		    <li class="dropdown-header">Cambiarias
+
+                                    <li><a href="../PublicacionesEstadisticas/Tipos_de_cambios.asp">Tipos de cambio</a></li>
+                                    <li><a href="../PublicacionesEstadisticas/Indices_tipo_cambio_multilateral.asp">Índices de Tipo de Cambio Multilateral</a></li>
+
+                            </li>
+		   </ul>
+
+					</li>
+					<li class="col-sm-4">
+                    	<ul class="boxLista">
+
+
+                            <li><a href="../PublicacionesEstadisticas/Sistema_nacional_de_pagos.asp">Sistema Nacional de Pagos</a></li>
+
+						</ul>
+							 <ul class="boxLista">
+
+                            <li><a href="../PublicacionesEstadisticas/Relevamiento_Expectativas_de_Mercado.asp">Relevamiento de Expectativas de Mercado (REM)</a></li>
+								 </ul>
+								  <ul class="boxLista">
+                            <li><a href="../PublicacionesEstadisticas/Encuesta_de_condiciones_crediticias.asp">Encuesta de Condiciones Crediticias (ECC)</a></li>
+									 </ul>
+							 <ul class="boxLista">
+                            <li><a href="../PublicacionesEstadisticas/Normas_estandar_divulgacion_datos.asp">Normas Especiales para la Divulgación de Datos - FMI</a></li>
+							</ul>
+							    <ul class="boxLista">
+							<li><a href="../PublicacionesEstadisticas/Operaciones-y-subastas.asp">Operaciones de Regulación Monetaria</a></li>
+							</ul>
+								 <ul class="boxLista">
+							<li><a href="../PublicacionesEstadisticas/subasta-dolares-hacienda.asp">Subasta de dólares por cuenta y orden de Hacienda</a></li>
+                        </ul>
+    				</li>
+
+
+				</ul>
+			</li>
+
+
+            <!-- BOTÓN EL BCRA Y VOS -->
+				<li class="dropdown dropdown-large botonaranja">
+				<a href="#" class="dropdown-toggle botonaranja" data-toggle="dropdown">El BCRA y vos </a>
+
+				<ul class="dropdown-menu dropdown-menu-large dropdown-menu-large-naranja row">
+					<li class="col-sm-4">
+
+
+						<ul class="boxLista">
+							<li><a href="../BCRAyVos/Como-hacer-un-reclamo-ante-el-Banco-Central.asp">HACER UN RECLAMO</a></li>
+
+						</ul>
+						<ul class="boxLista">
+							<li class="dropdown-header">CONSULTÁ</li>
+                       		<li><a href="../BCRAyVos/Situacion_Crediticia.asp">Central de Deudores</a></li>
+							<li><a href="../BCRAyVos/Central-de-Facturas-de-Credito-Electronicas-Impagas-CenFIV.asp">Central de Facturas de Crédito Electrónicas MiPyME impagas al vencimiento (CenFIV)</a></li>
+                       		<li><a href="../BCRAyVos/Cheques_Denunciados.asp">Cheques Denunciados</a></li>
+							<li><a href="../Noticias/Relanzamiento-Cuenta-Gratuita-Universal.asp">Cuenta Gratuita Universal (CGU)</a></li>
+                       		<li><a href="../BCRAyVos/Realizacion_de_activos.asp">Realización de activos</a></li>
+							<li><a href="../BCRAyVos/Oficios_judiciales.asp">Oficios Judiciales</a></li>
+                       		<li><a href="../SistemasFinancierosYdePagos/Como_pagar_multa.asp">Pago de multas cambiarias y financieras</a></li>
+							<li><a href="../BCRAyVos/exportaciones-bcra-certificados-cumplidos-secoexpo.asp">Certificaciones de cumplido (SECOEXPO)</a></li>
+							<li><a href="../BCRAyVos/calculadora-intereses-tasa-justicia.asp">Calculadora de intereses | Tasa de interés para uso de la Justicia - Comunicado P 14290</a></li>
+						</ul>
+                        <ul class="boxLista">
+							<li class="dropdown-header">COMPARÁ</li>&nbsp
+                       		<li><a href="../BCRAyVos/Comparacion_de_Comisiones.asp#a">Comparación de comisiones</a></li>
+							<li><a href="../BCRAyVos/Ingresos-Brutos-Provinciales.asp">Impuesto sobre los Ingresos Brutos a la actividad financiera por jurisdicción </a></li>
+							<li><a href="../BCRAyVos/Regimen_de_transparencia.asp">Régimen de Transparencia</a></li>
+								<li><a href="../BCRAyVos/Plazos_fijos_online.asp">Tasas Plazos Fijos <em>Online</em> en Pesos</a></li>
+
+						</ul>
+
+
+
+
+
+					</li>
+
+
+
+					<li class="col-sm-4">
+						<ul class="boxLista">
+							<li><a href="../BCRAyVos/Usuarios_Financieros.asp">USUARIOS FINANCIEROS</a></li>
+							<!--<li><a href="../BCRAyVos/Situacion_Crediticia.asp">Central de Deudores</a></li>
+							<li><a href="../BCRAyVos/Cheques_Denunciados.asp">Cheques Denunciados</a></li>-->
+
+							<li><a href="../BCRAyVos/Como-prevenir-estafas-virtuales.asp">Cómo prevenir estafas</a>
+
+							<li><a href="../BCRAyVos/Como-hacer-un-reclamo-ante-el-Banco-Central.asp">Cómo hacer un reclamo ante el Banco Central</a>
+
+
+
+						<!--	<li><a href="../BCRAyVos/Como-prevenir-estafas-virtuales.asp">Cómo prevenir estafas</a></li>
+							<li><a href="../BCRAyVos/Reclamos.asp">Cómo reclamar ante el Banco Central </a></li>
+							<li> <a href="../BCRAyVos/Pedido-de-rectificacion-supresion-de-registro-en-la-central-de-deudores.asp">Cómo rectificar o suprimir registros en la Central de Deudores</a></li>-->
+							<li><a href="../BCRAyVos/como-usar-productos-bancarios.asp">Cómo usar los productos bancarios </a></li>
+
+						<!--	<li><a href="../BCRAyVos/Comparacion_de_Comisiones.asp">Comparar comisiones bancarias </a></li>-->
+							<li><a href="../BCRAyVos/Preguntas_frecuentes.asp">Consultar: respuestas a preguntas frecuentes sobre productos bancarios </a></li>
+						<!--	<li><a href="../SistemasFinancierosYdePagos/Entidades_financieras.asp">Datos de las entidades financieras</a></li>-->
+							<li><a href="../BCRAyVos/diccionario-financiero.asp">Diccionario financiero</a></li>
+							<li><a href="../BCRAyVos/Feriados-bancarios-2025.asp">Feriados bancarios</a></li>
+						<!--	<li><a href="../PublicacionesEstadisticas/Informe-protecion-personas-usuarias.asp">Informe sobre Protección a las Personas Usuarias de Servicios Financieros</a></li> -->
+                            <li><a href="../BCRAyVos/responsables-de-atencion-al-usuario.asp">Responsables de atención al usuario</a></li>
+							<li><a href="../BCRAyVos/sugerencias-o-quejas.asp">Sugerir y presentar quejas</a></li>
+							<li><a href="../BCRAyVos/tus-derechos-y-obligaciones-de-los-bancos.asp">Tus derechos y las obligaciones de los bancos </a></li>
+
+
+					   </ul>
+
+					</li>
+
+					<li class="col-sm-4">
+
+						<ul class="boxLista">
+							<li><a href="../BCRAyVos/catalogo-de-APIs-banco-central.asp">APIS DEL BANCO CENTRAL</a></li>
+
+						</ul>
+						<ul class="boxLista">
+                           		<li><a href="../Saber_es_central/index.html">SABER ES CENTRAL</a></li>
+
+                           	</ul>
+					</li>
+
+					<!--	<ul class="boxLista">
+                           		<li><a href="../Institucional/premio-pintura-bcra-PNP.asp">PREMIO NACIONAL DE PINTURA BANCO CENTRAL</a></li>
+
+                           	</ul>-->
+
+
+					</li>
+					<li class="col-sm-4">
+						<ul class="boxLista">
+							<li><a href="../BCRAyVos/Educacion-Financiera.asp">EDUCACIÓN FINANCIERA</a></li>
+						<!--	<li class="dropdown-header">EDUCACIÓN FINANCIERA</li>
+							<li class="dropdown-submenu">Aprendiendo a Ahorrar
+								<ul class="dropdown-submenu">
+									<li><a href="../BCRAyVos/Aprendiendo-a-ahorrar-sobre-el-programa.asp">Sobre el programa</a></li>
+									<li><a href="../BCRAyVos/Aprendiendo-a-ahorrar-que-es-el-ahorro.asp">Qué es el ahorro</a></li>
+									<li><a href="../BCRAyVos/Aprendiendo-a-ahorrar-como-ahorrar-en-5-pasos.asp">Cómo ahorrar en 5 pasos</a></li>
+									<li><a href="../BCRAyVos/Aprendiendo-a-ahorrar-cuentas-ahorro-menores-18.asp">Cuentas de ahorro para menores de 18 años</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">Habilidades Financieras para la Vida
+								<ul class="dropdown-submenu">
+									<li><a href="../BCRAyVos/Habilidades-financieras-sobre-el-progrma.asp">Sobre el programa</a></li>
+									<li><a href="../BCRAyVos/Habilidades-Recorridos.asp">Recorridos | Material didáctico</a></li>
+								</ul>
+							</li>-->
+							<li><a href="../BCRAyVos/Programas-Educacion-Financiera-bcra.asp">Programas de Educación Financiera </a></li>
+							<li><a href="../BCRAyVos/encuesta_caf.asp">Encuesta de medición de capacidades financieras </a></li>
+							<li><a href="../BCRAyVos/Educacion-Financiera-material-didactico.asp">Más | Material didáctico de Educación Financiera   </a></li>
+
+						</ul>
+
+						<ul class="boxLista">
+						    <li class="dropdown-header">VISITANOS</li>
+                       		<li><a href="../BCRAyVos/Bibliotecas.asp">Bibliotecas</a></li>
+                       		<li><a href="../BCRAyVos/Museo_Historico_y_Numismatico.asp">Museo Histórico y Numismático</a></li>
+                       		<li><a href="../BCRAyVos/Stand_Numismatico.asp">Stand de emisiones numismáticas</a></li>
+							<!--<li><a href="../BCRAyVos/Tecnopolis-2023.asp">Tecnópolis</a></li>-->
+						</ul>
+
+						<ul class="boxLista">
+
+                            <li><a href="../BCRAyVos/Consulta-publica-sobre-proyectos-normativos.asp">Consulta pública sobre proyectos normativos</a></li>
+						</ul>
+
+						<ul class="boxLista">
+                       		<li><a href="../BCRAyVos/Trabaja-en-el-BCRA-busquedas-vigentes.asp">Trabajá en el BCRA</a></li>
+                            <!--li><a href="#">Eventos</a></li-->
+                       		<li><a href="../BCRAyVos/Contacto.asp">Contactanos</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+
+	</div><!-- /.nav-collapse -->
+</nav>
+
+
+
+</div>
+</header>
+
+<div class="navegacion-breadcrumb">
+    <ol class="breadcrumb paginas">
+        <li class="disabled">El BCRA y vos</li>
+        <li class="disabled"><a href="Situacion_Crediticia.asp">Consultá</a></li>
+        <li class="active">Resultado situación crediticia CUIT/CUIL</li>
+    </ol>
+</div>
+
+<!--CONTENIDO PRINCIPAL-->
+
+<div class="contenido">
+	<div class="row">
+		<div class="col-xs-12 col-md-12">
+    		<div class="clearfix pagina-interior">
+				<p class="post-pagina-interior pull-right"><i class="fa fa-print fa-2x pull-right" id="Imprime" onClick="imprTab()" alt="Imprimir"></i>
+
+				<div id="aimprimir">
+
+				<img id="Logobcra" src="../Imagenes/Comunes/logoBCRA.png" border="0" style="display:none;">
+
+
+
+            	<h2>Consulta de información para el CUIT-CUIL-CDI 20132146234 - TINELLI MARCELO HUGO</h2>
+                <p><h2>Central de Deudores del Sistema Financiero</h2></p>
+
+
+	<p class="post-pagina-interior">En el siguiente cuadro, el monto de deuda se encuentra expresado en miles de pesos.</p>
+
+
+
+<table class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td width="37%">Denominación del deudor<sup>1</sup></td>
+			<td width="31%">Entidad<sup>2</sup></td>
+			<td width="9%">Periodo<sup>3</sup></td>
+			<td width="9%">Situación<sup>4</sup></td>
+			<td width="10%">Monto<sup>5</sup></td>
+			<td width="5%">Días de atraso<sup>6</sup></td>
+			<td width="17%">Observaciones<sup>7</sup><sup>/8</sup></td>
+
+		</tr>
+	</thead>
+
+
+
+	<tr>
+		<td>TINELLI MARCELO HUGO</td>
+		<td>AMERICAN EXPRESS ARGENTINA S.A.                                                 </td>
+		<td>06/25</td>
+		<td>
+		<font color="#008000" style="font-size: 9pt">1</font></td>
+		<td>102936</td>
+		<td>N/A</td>
+		<td>
+
+
+		   -
+
+
+
+
+
+
+		</td>
+	</tr>
+
+
+
+
+
+	<tr>
+		<td>TINELLI MARCELO HUGO</td>
+		<td>BANCO DE GALICIA Y BUENOS AIRES S.A.                                            </td>
+		<td>06/25</td>
+		<td>
+		<font color="#008000" style="font-size: 9pt">1</font></td>
+		<td>6545</td>
+		<td>N/A</td>
+		<td>
+
+
+		   -
+
+
+
+
+
+
+		</td>
+	</tr>
+
+
+
+
+
+	<tr>
+		<td>TINELLI MARCELO HUGO</td>
+		<td>BANCO CREDICOOP COOPERATIVO LIMITADO                                            </td>
+		<td>06/25</td>
+		<td>
+		<font color="#008000" style="font-size: 9pt">1</font></td>
+		<td>73</td>
+		<td>N/A</td>
+		<td>
+
+
+		   -
+
+
+
+
+
+
+		</td>
+	</tr>
+
+
+
+</table>
+
+<table class="table table-transparente table-responsive">
+
+
+    		<tr>
+            	<td><strong><font style="font-size:16px">Este deudor permanece en Situación 1 - Normal o no ha sido incluido en la Central de Deudores en períodos intermedios, desde: 11/2022 (Sección 4. Apartado 2. del <a href="../Pdfs/Texord/t-ceninf.pdf" target="_blank">Texto ordenado de Centrales de Información</a> &#8211; llamadas * y **)</font></strong>
+                </td>
+            </tr>
+
+
+	<tr>
+		<td>
+            <p class="post-pagina-interior">Los derechos de rectificación, actualización, supresión y confidencialidad deben ejercerse ante la entidad cedente que sea parte en la relación jurídica a que se refiere el dato impugnado.</p>
+            <p class="post-pagina-interior">A solicitud de cada cliente, dentro de los 10 días corridos del pedido, la entidad deberá comunicarle la última clasificación que le ha asignado, junto con los fundamentos que la justifican según la evaluación realizada por la entidad, el importe total de deudas con el sistema financiero y las clasificaciones asignadas que surjan de la última información disponible en la &#8220;Central de Deudores del Sistema Financiero&#8221;. Los clientes deberán ser notificados de que tienen la posibilidad de requerir esos datos, en el momento de presentarse las solicitudes de crédito, mediante una fórmula independiente de ellas.</p>
+            <p class="doble-salto-linea">
+            <a href="../SistemasFinancierosYdePagos/Entidades_financieras.asp">Para más información sobre las entidades que operan en el país, consultar aquí.</a></p>
+            <br><br>
+            <b><sup>1 </sup>Denominación del deudor</b>
+            <p align="justify">Nombre o razón social de la persona humana o jurídica que figura en el padrón de la Agencia de Recaudación y Control Aduanero (ARCA) o bien la que fuera registrada por la entidad informante.</p>
+            <br>
+            <b><sup>2 </sup>Entidad</b>
+            <br>Denominación de la entidad informante.
+            <br><br>
+            <b><sup>3 </sup>Período</b>
+            <br>En formato MM/AA, indica el último período informado.
+            <br><br>
+            <b><sup>4 </sup>Situación</b>
+            <p align="justify">Indica la clasificación del deudor informada por la entidad. Para más información, acceder al <a href="../Pdfs/Texord/t-cladeu.pdf" target="_blank">Texto ordenado de las normas sobre Clasificación de deudores.</a></p>
+            <br>
+            <b><p align="justify">Situación 1: En situación normal</b> | Cartera comercial, ver sección 6 punto 6.5.1.; <b>Situación normal</b> | Cartera para consumo o vivienda, ver sección 7, punto 7.2.1.</p>
+            <br>
+            <b><p align="justify">Situación 2: Con seguimiento especial</b> | Con seguimiento especial | Cartera comercial, ver sección 6, punto 6.5.2.; <b>Riesgo bajo</b> | Cartera para consumo o vivienda ver sección 7, punto 7.2.2.</p>
+            <br>
+            <b><p align="justify">Situación 3: Con problemas</b> | Cartera comercial, ver sección 6, punto 6.5.3.; <b>Riesgo medio</b> |Cartera para consumo o vivienda ver sección 7, punto 7.2.3.</p>
+            <br>
+            <b><p align="justify">Situación 4: Con alto riesgo de insolvencia</b> | Cartera comercial, ver sección 6, punto 6.5.4.; <b>Riesgo alto</b> |Cartera para consumo o vivienda, ver sección 7, punto 7.2.4.</p>
+            <br>
+            <b><p align="justify">Situación 5: Irrecuperable</b> | Cartera comercial, ver sección 6, punto 6.5.5.; <b>Irrecuperable</b> |Cartera para consumo o vivienda, ver sección 7, punto 7.2.5.</p>
+
+            <!--<b><p align="justify">Situación 6: Irrecuperable por disposición técnica</b> | Cartera comercial, ver sección 6, punto 6.5.6.; <b>Irrecuperable por disposición técnica</b> |Cartera para consumo o vivienda, ver sección 7, punto 7.2.6.</p>
+            -->
+            <br><br><b><sup>5 </sup>Monto</b>
+            <br>Información en miles de pesos.
+            <br><br><b><sup>6 </sup>Días atraso y <sup>7 </sup>Observaciones</b>
+            <p align="justify">Según lo determinado en el punto 8. del apartado B del <a href="../Pdfs/Texord/t-RI-DSF.pdf" target="_blank">Texto ordenado del "Régimen Informativo Contable Mensual - Deudores del Sistema Financiero&#8221;</a>. Si el deudor perteneciente a la cartera para consumo o vivienda en situación distinta a la normal, se encuentra clasificado por refinanciaciones, recategorización obligatoria, situación jurídica -concordatos judiciales o extrajudiciales, concurso preventivo, gestión judicial o quiebra- o irrecuperable por disposición técnica, se informarán los días de atraso. La leyenda (N/A) indica "No Aplicable".</p>
+
+
+            <br><br><b><sup>8</sup></b> Se identificarán los deudores de acuerdo con lo previsto en la Ley 25.326 de Protección de los Datos Personales según su información se encuentre comprendida en los siguientes puntos:
+			<br>
+ 			<ul style="list-style-type: circle; padding-left: 20px;">
+  				  <li align="justify">Información sometida a revisión (artículo 16, inciso 6)</li>
+
+			</ul>
+            <ul style="list-style-type: circle; padding-left: 20px;">
+  				  <li align="justify">Información sometida a proceso judicial (artículo 38, inciso 3)</li>
+			</ul>
+
+            <br><p align="justify">Las financiaciones comprenden la asistencia crediticia, títulos privados, garantías otorgadas, responsabilidades eventuales y otros conceptos según lo descripto en los puntos 2 y 3 del apartado B del <a href="../Pdfs/Texord/t-RI-DSF.pdf" target="_blank">Texto ordenado del "Régimen Informativo Contable Mensual - Deudores del Sistema Financiero&#8221;</a>. Se aclara que los deudores con préstamos hipotecarios pueden tener asignado además de esos préstamos, las garantías otorgadas por los bancos minoristas.</p>
+		</td>
+	</tr>
+
+
+</table>
+
+
+
+<table class="table table-transparente table-responsive">
+	<tr>
+		<td>&nbsp;
+
+		</td>
+	</tr>
+</table>
+
+
+
+<p class="post-pagina-interior"><a href="../pdfs/BCRAyVos/t-cladeu.pdf" onclick="ga('send', 'event', 'MLN-TextosOrdenados', 'Click', 't-cladeu.pdf', '0');" target="_blank"><h3>Deudores en situación irregular de ex entidades financieras</h3></a>
+<p class="post-pagina-interior">No existen registros informados con clave de identificación fiscal por entes residuales de entidades financieras públicas privatizadas o en proceso de privatización o disolución, entidades financieras cuya autorización para funcionar haya sido revocada por el Banco Central y se encuentren en estado de liquidación judicial o quiebra, o fideicomisos en los que SEDESA sea beneficiario.
+
+                <h3>Historia 24 meses</h3>
+
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default no-padding">
+                                    <div class="panel-heading">
+                                        <h5 data-toggle="collapse" data-parent="#accordion" href="#1" class="panel-title expand">
+                                            <div class="right-arrow pull-right">+</div>
+                                                <a href="#">AMERICAN EXPRESS ARGENTINA S.A.                                                 </a>
+                                        </h5>
+                                        <div id="1" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+
+												<table class="table table-BCRA table-bordered table-responsive table-hover">
+													<thead>
+														<tr>
+															<th>Período</th>
+                                                            <th>Situación</th>
+                                                            <th>Monto</th>
+                                                            <th>Proceso Judicial/Revisión</th>
+														</tr>
+													</thead>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2025</td>
+                                                            <td>1</td>
+                                                            <td>102.936</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2025</td>
+                                                            <td>1</td>
+                                                            <td>19.783</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2025</td>
+                                                            <td>1</td>
+                                                            <td>51.000</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2025</td>
+                                                            <td>1</td>
+                                                            <td>28.861</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2025</td>
+                                                            <td>1</td>
+                                                            <td>13.397</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2025</td>
+                                                            <td>1</td>
+                                                            <td>12.022</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2024</td>
+                                                            <td>1</td>
+                                                            <td>23.537</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2024</td>
+                                                            <td>1</td>
+                                                            <td>30.414</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2024</td>
+                                                            <td>1</td>
+                                                            <td>10.731</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2024</td>
+                                                            <td>1</td>
+                                                            <td>37.013</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2024</td>
+                                                            <td>1</td>
+                                                            <td>25.578</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2024</td>
+                                                            <td>1</td>
+                                                            <td>20.020</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2024</td>
+                                                            <td>1</td>
+                                                            <td>20.323</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2024</td>
+                                                            <td>1</td>
+                                                            <td>13.686</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2024</td>
+                                                            <td>1</td>
+                                                            <td>36.162</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2024</td>
+                                                            <td>1</td>
+                                                            <td>12.938</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2024</td>
+                                                            <td>1</td>
+                                                            <td>7.322</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2024</td>
+                                                            <td>1</td>
+                                                            <td>37.799</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2023</td>
+                                                            <td>1</td>
+                                                            <td>8.430</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2023</td>
+                                                            <td>1</td>
+                                                            <td>1.330</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2023</td>
+                                                            <td>1</td>
+                                                            <td>10.889</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2023</td>
+                                                            <td>1</td>
+                                                            <td>2.344</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2023</td>
+                                                            <td>1</td>
+                                                            <td>1.725</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2023</td>
+                                                            <td>1</td>
+                                                            <td>4.493</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+												</table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default no-padding">
+                                    <div class="panel-heading">
+                                        <h5 data-toggle="collapse" data-parent="#accordion" href="#2" class="panel-title expand">
+                                            <div class="right-arrow pull-right">+</div>
+                                                <a href="#">BANCO COINAG S.A.                                                               </a>
+                                        </h5>
+                                        <div id="2" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+
+												<table class="table table-BCRA table-bordered table-responsive table-hover">
+													<thead>
+														<tr>
+															<th>Período</th>
+                                                            <th>Situación</th>
+                                                            <th>Monto</th>
+                                                            <th>Proceso Judicial/Revisión</th>
+														</tr>
+													</thead>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2024</td>
+                                                            <td>1</td>
+                                                            <td>522</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2024</td>
+                                                            <td>1</td>
+                                                            <td>669</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2024</td>
+                                                            <td>1</td>
+                                                            <td>274</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+												</table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default no-padding">
+                                    <div class="panel-heading">
+                                        <h5 data-toggle="collapse" data-parent="#accordion" href="#3" class="panel-title expand">
+                                            <div class="right-arrow pull-right">+</div>
+                                                <a href="#">BANCO CREDICOOP COOPERATIVO LIMITADO                                            </a>
+                                        </h5>
+                                        <div id="3" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+
+												<table class="table table-BCRA table-bordered table-responsive table-hover">
+													<thead>
+														<tr>
+															<th>Período</th>
+                                                            <th>Situación</th>
+                                                            <th>Monto</th>
+                                                            <th>Proceso Judicial/Revisión</th>
+														</tr>
+													</thead>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2025</td>
+                                                            <td>1</td>
+                                                            <td>73</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2025</td>
+                                                            <td>1</td>
+                                                            <td>60</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2025</td>
+                                                            <td>1</td>
+                                                            <td>62</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2025</td>
+                                                            <td>1</td>
+                                                            <td>37</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2025</td>
+                                                            <td>1</td>
+                                                            <td>402</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2024</td>
+                                                            <td>1</td>
+                                                            <td>36</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2024</td>
+                                                            <td>1</td>
+                                                            <td>18</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2024</td>
+                                                            <td>1</td>
+                                                            <td>124</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2024</td>
+                                                            <td>1</td>
+                                                            <td>8</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2024</td>
+                                                            <td>1</td>
+                                                            <td>5</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2024</td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2023</td>
+                                                            <td>1</td>
+                                                            <td>4</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2023</td>
+                                                            <td>1</td>
+                                                            <td>9</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2023</td>
+                                                            <td>1</td>
+                                                            <td>72</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2023</td>
+                                                            <td>1</td>
+                                                            <td>4</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2023</td>
+                                                            <td>1</td>
+                                                            <td>61</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+												</table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default no-padding">
+                                    <div class="panel-heading">
+                                        <h5 data-toggle="collapse" data-parent="#accordion" href="#4" class="panel-title expand">
+                                            <div class="right-arrow pull-right">+</div>
+                                                <a href="#">BANCO DE GALICIA Y BUENOS AIRES S.A.                                            </a>
+                                        </h5>
+                                        <div id="4" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+
+												<table class="table table-BCRA table-bordered table-responsive table-hover">
+													<thead>
+														<tr>
+															<th>Período</th>
+                                                            <th>Situación</th>
+                                                            <th>Monto</th>
+                                                            <th>Proceso Judicial/Revisión</th>
+														</tr>
+													</thead>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2025</td>
+                                                            <td>1</td>
+                                                            <td>6.545</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2025</td>
+                                                            <td>1</td>
+                                                            <td>7.314</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2025</td>
+                                                            <td>1</td>
+                                                            <td>8.710</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2025</td>
+                                                            <td>1</td>
+                                                            <td>10.838</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2025</td>
+                                                            <td>1</td>
+                                                            <td>7.973</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2025</td>
+                                                            <td>1</td>
+                                                            <td>11.061</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2024</td>
+                                                            <td>1</td>
+                                                            <td>15.374</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2024</td>
+                                                            <td>1</td>
+                                                            <td>9.756</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2024</td>
+                                                            <td>1</td>
+                                                            <td>6.946</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2024</td>
+                                                            <td>1</td>
+                                                            <td>8.541</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2024</td>
+                                                            <td>1</td>
+                                                            <td>8.353</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2024</td>
+                                                            <td>1</td>
+                                                            <td>6.634</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2024</td>
+                                                            <td>1</td>
+                                                            <td>6.321</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2024</td>
+                                                            <td>1</td>
+                                                            <td>7.179</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2024</td>
+                                                            <td>1</td>
+                                                            <td>4.758</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2024</td>
+                                                            <td>1</td>
+                                                            <td>4.889</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2024</td>
+                                                            <td>1</td>
+                                                            <td>4.639</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2024</td>
+                                                            <td>1</td>
+                                                            <td>5.230</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2023</td>
+                                                            <td>1</td>
+                                                            <td>6.064</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2023</td>
+                                                            <td>1</td>
+                                                            <td>4.506</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2023</td>
+                                                            <td>1</td>
+                                                            <td>5.395</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2023</td>
+                                                            <td>1</td>
+                                                            <td>5.746</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2023</td>
+                                                            <td>1</td>
+                                                            <td>6.698</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2023</td>
+                                                            <td>1</td>
+                                                            <td>7.129</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+												</table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default no-padding">
+                                    <div class="panel-heading">
+                                        <h5 data-toggle="collapse" data-parent="#accordion" href="#5" class="panel-title expand">
+                                            <div class="right-arrow pull-right">+</div>
+                                                <a href="#">Cooperativa de Viv., Cred. y Con. Amigal Ltda.                                  </a>
+                                        </h5>
+                                        <div id="5" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+
+												<table class="table table-BCRA table-bordered table-responsive table-hover">
+													<thead>
+														<tr>
+															<th>Período</th>
+                                                            <th>Situación</th>
+                                                            <th>Monto</th>
+                                                            <th>Proceso Judicial/Revisión</th>
+														</tr>
+													</thead>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2025</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2025</td>
+                                                            <td>1</td>
+                                                            <td>14.520</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2024</td>
+                                                            <td>1</td>
+                                                            <td>6.456</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2024</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2024</td>
+                                                            <td>1</td>
+                                                            <td>4.896</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>06/2024</td>
+                                                            <td>1</td>
+                                                            <td>17.493</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>05/2024</td>
+                                                            <td>1</td>
+                                                            <td>9.060</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>04/2024</td>
+                                                            <td>1</td>
+                                                            <td>15.454</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>03/2024</td>
+                                                            <td>1</td>
+                                                            <td>8.998</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>02/2024</td>
+                                                            <td>1</td>
+                                                            <td>6.097</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>01/2024</td>
+                                                            <td>1</td>
+                                                            <td>7.545</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>12/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>11/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>10/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>09/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>08/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+													<tbody>
+                                            			<tr>
+                                                        	<td>07/2023</td>
+                                                            <td>-</td>
+                                                            <td>0</td>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+
+												</table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <br>
+
+<p class="post-pagina-interior"><h2>Central de cheques rechazados</h2>
+
+
+
+<table  class="table table-BCRA table-bordered table-hover table-responsive">
+	<thead>
+		<tr>
+			<td colspan="8" >CHEQUES RECHAZADOS EN CUENTAS PERSONALES</td>
+		</tr>
+		<tr>
+			<td>Nro. Cheque</td>
+			<td>Fecha de rechazo</td>
+			<td>Monto</td>
+			<td>Causal</td>
+			<td>Fecha de pago cheque</td>
+			<td>Fecha de pago multa</td>
+			<td>Revisión *</td>
+			<td>PR. JUD. **</td>
+		</tr>
+	</thead>
+
+	<tr>
+		<td>20822875</td>
+		<td>13/10/2021</td>
+		<td>1.801.348,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>No Registra Pago</td>
+		<td>30/11/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+</table>
+
+
+<br>&nbsp;
+<table  width="100%" id="table1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="left">* Ley 25.326, artículo 16, inciso 6
+ <br>
+			** Ley 25.326, artículo 38, inciso 3
+ <br>
+
+	</tr>
+</table>
+
+<br>
+
+<table  class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="6">RESUMEN DE CHEQUES RECHAZADOS EN CUENTAS PERSONALES</td>
+		</tr>
+		<tr>
+			<td colspan="2">Rechazos sin fondos</td>
+			<td colspan="2">Rechazos defectos formales</td>
+			<td colspan="2">Rechazos a la registración</td>
+		</tr>
+		<tr>
+			<td>Cantidad</td>
+			<td>Monto</td>
+			<td>Cantidad</td>
+			<td>Monto</td>
+			<td>Cantidad</td>
+			<td>Monto</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>1</td>
+		<td>1.801.348,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+<table class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="3">RESUMEN TOTAL DE CHEQUES RECHAZADOS EN CUENTAS PERSONALES</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Cantidad</td>
+			<td>Monto</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>Total cheques rechazados</td>
+		<td>1</td>
+		<td>1.801.348,00</td>
+	</tr>
+	<tr>
+		<td>Total cheques abonados</td>
+		<td>0</td>
+		<td>0,00</td>
+	</tr>
+	<tr>
+		<td>Porcentaje de cheques abonados</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+</table>
+
+
+
+
+
+
+<table  class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="9">RESUMEN POR BANCO</td>
+		</tr>
+		<tr>
+			<td>Entidad</td>
+			<td colspan="2">Rechazos sin fondos</td>
+			<td colspan="2">Rechazos defectos formales</td>
+			<td colspan="2">Rechazos a la registración</td>
+			<td colspan="2">Cheques abonados</td>
+		</tr>
+	</thead>
+
+
+
+	<tr>
+		<td>Banco Nro. 1</td>
+		<td>1</td>
+		<td>1.801.348,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+  </tr>
+
+
+	<tr>
+		<td>Total</td>
+		<td>1</td>
+		<td>1.801.348,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+	</tr>
+</table>
+
+
+
+<br>&nbsp;
+
+<table  class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="9">CHEQUES RECHAZADOS EN CUENTAS DE PERSONAS JURÍDICAS</td>
+		</tr>
+		<tr>
+			<td>Nro. cheque</td>
+			<td>Fecha de rechazo</td>
+			<td>Monto</td>
+			<td>Causal</td>
+			<td>Denominación</td>
+			<td>Fecha de pago cheque</td>
+			<td>Fecha de pago multa</td>
+			<td>Revisión *</td>
+			<td>PR. JUD. **</td>
+		</tr>
+	</thead>
+
+	<tr>
+		<td>71544226</td>
+		<td>29/04/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>25/06/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544225</td>
+		<td>22/04/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>25/06/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544224</td>
+		<td>15/04/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>25/06/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544223</td>
+		<td>01/04/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>25/06/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544222</td>
+		<td>25/03/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>25/06/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544221</td>
+		<td>17/03/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>25/06/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544220</td>
+		<td>28/02/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>05/03/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544231</td>
+		<td>26/02/2025</td>
+		<td>1.780.716,67</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>05/03/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544230</td>
+		<td>19/02/2025</td>
+		<td>1.780.716,66</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>05/03/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544219</td>
+		<td>17/02/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>05/03/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544218</td>
+		<td>05/02/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>10/02/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544208</td>
+		<td>28/01/2025</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>10/02/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544217</td>
+		<td>17/01/2025</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>24/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544229</td>
+		<td>15/01/2025</td>
+		<td>1.780.716,66</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>24/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544209</td>
+		<td>14/01/2025</td>
+		<td>294.752,95</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>24/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544210</td>
+		<td>14/01/2025</td>
+		<td>2.789.617,76</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>10/02/2025</td>
+		<td>24/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544211</td>
+		<td>14/01/2025</td>
+		<td>254.485,76</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>10/02/2025</td>
+		<td>24/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544207</td>
+		<td>13/01/2025</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544232</td>
+		<td>13/01/2025</td>
+		<td>15.100.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544233</td>
+		<td>03/01/2025</td>
+		<td>1.302.157,43</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>12/03/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>26195185</td>
+		<td>30/12/2024</td>
+		<td>6.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544193</td>
+		<td>30/12/2024</td>
+		<td>83.390,72</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544194</td>
+		<td>30/12/2024</td>
+		<td>80.515,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544195</td>
+		<td>30/12/2024</td>
+		<td>4.510.130,59</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544196</td>
+		<td>30/12/2024</td>
+		<td>191.468,87</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544197</td>
+		<td>30/12/2024</td>
+		<td>1.244.002,88</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544198</td>
+		<td>30/12/2024</td>
+		<td>97.738,46</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544199</td>
+		<td>30/12/2024</td>
+		<td>66.389,51</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>03/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544234</td>
+		<td>30/12/2024</td>
+		<td>1.575.610,49</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>12/03/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544204</td>
+		<td>27/12/2024</td>
+		<td>1.397.858,75</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544206</td>
+		<td>27/12/2024</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544227</td>
+		<td>23/12/2024</td>
+		<td>40.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544203</td>
+		<td>20/12/2024</td>
+		<td>1.397.858,75</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>26195182</td>
+		<td>20/12/2024</td>
+		<td>5.500.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544186</td>
+		<td>16/12/2024</td>
+		<td>83.400,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>20/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544187</td>
+		<td>16/12/2024</td>
+		<td>84.650,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>20/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544188</td>
+		<td>16/12/2024</td>
+		<td>4.234.177,06</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>20/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544189</td>
+		<td>16/12/2024</td>
+		<td>299.860,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>20/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544190</td>
+		<td>16/12/2024</td>
+		<td>1.300.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>20/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544191</td>
+		<td>16/12/2024</td>
+		<td>124.626,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>20/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544192</td>
+		<td>16/12/2024</td>
+		<td>66.200,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>20/02/2025</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544215</td>
+		<td>16/12/2024</td>
+		<td>2.768.211,98</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544202</td>
+		<td>13/12/2024</td>
+		<td>1.397.858,75</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>26195184</td>
+		<td>13/12/2024</td>
+		<td>5.850.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544205</td>
+		<td>12/12/2024</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>26195183</td>
+		<td>06/12/2024</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>15/01/2025     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544055</td>
+		<td>11/06/2024</td>
+		<td>2.500.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>24/06/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71544054</td>
+		<td>23/05/2024</td>
+		<td>2.500.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>31/05/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>25027445</td>
+		<td>06/05/2024</td>
+		<td>448.659,39</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>31/05/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>25015637</td>
+		<td>02/05/2024</td>
+		<td>11.523.884,83</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>31/05/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>24585985</td>
+		<td>28/02/2024</td>
+		<td>20.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>01/03/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>24585988</td>
+		<td>30/01/2024</td>
+		<td>20.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>31/01/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>319</td>
+		<td>26/01/2024</td>
+		<td>16.799.640,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>16/04/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>24547818</td>
+		<td>03/01/2024</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>05/01/2024     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>317</td>
+		<td>26/09/2023</td>
+		<td>759.338,21</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>21/11/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>314</td>
+		<td>12/09/2023</td>
+		<td>759.338,21</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>21/11/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>304</td>
+		<td>01/08/2023</td>
+		<td>482.873,28</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>309</td>
+		<td>25/07/2023</td>
+		<td>590.082,65</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>306</td>
+		<td>19/07/2023</td>
+		<td>1.120.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>308</td>
+		<td>18/07/2023</td>
+		<td>590.082,65</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>303</td>
+		<td>12/07/2023</td>
+		<td>482.873,29</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>307</td>
+		<td>11/07/2023</td>
+		<td>590.082,65</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>302</td>
+		<td>22/06/2023</td>
+		<td>482.873,29</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>295</td>
+		<td>12/06/2023</td>
+		<td>553.585,25</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>296</td>
+		<td>12/06/2023</td>
+		<td>553.585,25</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>297</td>
+		<td>12/06/2023</td>
+		<td>553.585,25</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>248</td>
+		<td>01/06/2023</td>
+		<td>302.070,11</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>301</td>
+		<td>31/05/2023</td>
+		<td>430.314,65</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>247</td>
+		<td>30/05/2023</td>
+		<td>302.070,11</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>278</td>
+		<td>30/05/2023</td>
+		<td>750.334,20</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>277</td>
+		<td>23/05/2023</td>
+		<td>750.334,20</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>299</td>
+		<td>23/05/2023</td>
+		<td>473.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>246</td>
+		<td>22/05/2023</td>
+		<td>302.070,11</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>266</td>
+		<td>16/05/2023</td>
+		<td>104.059,09</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>276</td>
+		<td>16/05/2023</td>
+		<td>750.334,20</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>245</td>
+		<td>15/05/2023</td>
+		<td>302.070,11</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>294</td>
+		<td>12/05/2023</td>
+		<td>549.959,04</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>298</td>
+		<td>12/05/2023</td>
+		<td>3.626,24</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>285</td>
+		<td>11/05/2023</td>
+		<td>1.051.614,47</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>291</td>
+		<td>11/05/2023</td>
+		<td>1.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>243</td>
+		<td>03/05/2023</td>
+		<td>1.051.730,85</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>254</td>
+		<td>03/05/2023</td>
+		<td>577.751,06</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>260</td>
+		<td>03/05/2023</td>
+		<td>88.810,34</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>263</td>
+		<td>03/05/2023</td>
+		<td>893.011,16</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>275</td>
+		<td>02/05/2023</td>
+		<td>750.334,20</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>274</td>
+		<td>25/04/2023</td>
+		<td>750.334,20</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>238</td>
+		<td>21/04/2023</td>
+		<td>398.244,96</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>27/04/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>280</td>
+		<td>19/04/2023</td>
+		<td>453.233,24</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>27/04/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>237</td>
+		<td>18/04/2023</td>
+		<td>398.244,96</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>27/04/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>270</td>
+		<td>18/04/2023</td>
+		<td>1.005.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>271</td>
+		<td>18/04/2023</td>
+		<td>1.005.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>09/08/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>273</td>
+		<td>18/04/2023</td>
+		<td>750.334,20</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>27/04/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>250</td>
+		<td>13/03/2023</td>
+		<td>982.500,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>14/03/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>241</td>
+		<td>02/03/2023</td>
+		<td>631.038,51</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>14/03/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>231</td>
+		<td>01/03/2023</td>
+		<td>634.032,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>LAFLIA CONTENIDOS S.A.</td>
+		<td>No Registra Pago</td>
+		<td>14/03/2023     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725883</td>
+		<td>28/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>29/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725897</td>
+		<td>28/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>29/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725890</td>
+		<td>27/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>29/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725891</td>
+		<td>27/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>29/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725880</td>
+		<td>23/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>24/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725893</td>
+		<td>23/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>24/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725881</td>
+		<td>22/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>24/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725908</td>
+		<td>22/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>24/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725882</td>
+		<td>16/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>21/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725902</td>
+		<td>16/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>21/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725888</td>
+		<td>14/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>15/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725899</td>
+		<td>14/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>15/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725884</td>
+		<td>13/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>15/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725903</td>
+		<td>13/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>15/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725878</td>
+		<td>09/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>10/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725879</td>
+		<td>09/06/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>10/06/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725886</td>
+		<td>27/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>30/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725896</td>
+		<td>27/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>30/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725875</td>
+		<td>24/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725885</td>
+		<td>24/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725877</td>
+		<td>23/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725892</td>
+		<td>23/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725895</td>
+		<td>23/05/2022</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725909</td>
+		<td>23/05/2022</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725901</td>
+		<td>20/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725904</td>
+		<td>20/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>26/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725889</td>
+		<td>17/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>19/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725894</td>
+		<td>17/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>19/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725898</td>
+		<td>16/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>19/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725906</td>
+		<td>16/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>19/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725876</td>
+		<td>12/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>13/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725905</td>
+		<td>12/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>13/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725887</td>
+		<td>10/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>11/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21725910</td>
+		<td>10/05/2022</td>
+		<td>5.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>11/05/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557988</td>
+		<td>30/03/2022</td>
+		<td>2.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>31/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557987</td>
+		<td>29/03/2022</td>
+		<td>2.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>31/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557097</td>
+		<td>25/03/2022</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>28/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557102</td>
+		<td>25/03/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>28/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557980</td>
+		<td>25/03/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>28/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557984</td>
+		<td>25/03/2022</td>
+		<td>15.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>28/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557100</td>
+		<td>17/03/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>18/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557101</td>
+		<td>17/03/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>18/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557985</td>
+		<td>17/03/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>18/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>21557989</td>
+		<td>17/03/2022</td>
+		<td>10.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>PUBLICIDAD E IMAGEN S.R.L.</td>
+		<td>No Registra Pago</td>
+		<td>18/03/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725123</td>
+		<td>04/01/2022</td>
+		<td>333.960,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>11/01/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725244</td>
+		<td>04/01/2022</td>
+		<td>563.486,10</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>11/01/2022     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318416</td>
+		<td>16/12/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>17/12/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318394</td>
+		<td>13/12/2021</td>
+		<td>190.182,14</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>17/12/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318404</td>
+		<td>25/11/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>02/12/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725122</td>
+		<td>25/11/2021</td>
+		<td>333.960,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>02/12/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725233</td>
+		<td>25/11/2021</td>
+		<td>858.143,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>02/12/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725243</td>
+		<td>25/11/2021</td>
+		<td>563.486,10</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>02/12/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318393</td>
+		<td>11/11/2021</td>
+		<td>190.181,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>19/11/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725232</td>
+		<td>21/10/2021</td>
+		<td>858.143,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>27/10/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725242</td>
+		<td>21/10/2021</td>
+		<td>563.486,10</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>27/10/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725121</td>
+		<td>20/10/2021</td>
+		<td>333.960,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>27/10/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318392</td>
+		<td>14/10/2021</td>
+		<td>190.181,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>18/10/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>20136827</td>
+		<td>22/09/2021</td>
+		<td>611.111,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>12/10/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318413</td>
+		<td>17/09/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>23/09/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725231</td>
+		<td>14/09/2021</td>
+		<td>858.143,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>23/09/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318391</td>
+		<td>14/09/2021</td>
+		<td>190.181,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>23/09/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>20136826</td>
+		<td>31/08/2021</td>
+		<td>611.111,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>07/09/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725119</td>
+		<td>25/08/2021</td>
+		<td>333.960,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>30/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318390</td>
+		<td>23/08/2021</td>
+		<td>190.181,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>30/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318412</td>
+		<td>18/08/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>30/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725230</td>
+		<td>12/08/2021</td>
+		<td>858.143,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>13/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318459</td>
+		<td>11/08/2021</td>
+		<td>855.068,35</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>13/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725118</td>
+		<td>03/08/2021</td>
+		<td>333.960,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>05/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318406</td>
+		<td>03/08/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>05/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318411</td>
+		<td>03/08/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>05/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318458</td>
+		<td>03/08/2021</td>
+		<td>855.068,35</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>05/08/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725182</td>
+		<td>21/07/2021</td>
+		<td>1.082.340,98</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>26/07/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725165</td>
+		<td>19/07/2021</td>
+		<td>732.568,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>26/07/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318457</td>
+		<td>14/07/2021</td>
+		<td>855.068,35</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>16/07/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318389</td>
+		<td>14/07/2021</td>
+		<td>190.181,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>16/07/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725229</td>
+		<td>13/07/2021</td>
+		<td>858.143,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>16/07/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318399</td>
+		<td>28/06/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>08/07/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318456</td>
+		<td>28/06/2021</td>
+		<td>855.068,35</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>08/07/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318388</td>
+		<td>16/06/2021</td>
+		<td>190.181,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>18/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318410</td>
+		<td>16/06/2021</td>
+		<td>112.832,50</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>18/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725228</td>
+		<td>11/06/2021</td>
+		<td>858.143,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>18/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318472</td>
+		<td>11/06/2021</td>
+		<td>18.408.394,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>18/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318419</td>
+		<td>09/06/2021</td>
+		<td>12.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>18/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725181</td>
+		<td>28/05/2021</td>
+		<td>1.082.340,98</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>01/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318387</td>
+		<td>28/05/2021</td>
+		<td>190.181,40</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>01/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318454</td>
+		<td>26/05/2021</td>
+		<td>855.068,35</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>01/06/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318418</td>
+		<td>13/05/2021</td>
+		<td>12.000.000,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>14/05/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318436</td>
+		<td>12/03/2021</td>
+		<td>30.273.330,74</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>15/03/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725209</td>
+		<td>02/03/2021</td>
+		<td>7.832.012,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>15/03/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318376</td>
+		<td>02/03/2021</td>
+		<td>583.930,90</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>15/03/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318377</td>
+		<td>02/03/2021</td>
+		<td>576.507,65</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>15/03/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318378</td>
+		<td>02/03/2021</td>
+		<td>483.693,45</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>15/03/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>84318379</td>
+		<td>02/03/2021</td>
+		<td>1.934.006,75</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>15/03/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71094619</td>
+		<td>06/01/2021</td>
+		<td>1.597.696,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>12/01/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71094620</td>
+		<td>06/01/2021</td>
+		<td>1.597.696,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>12/01/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71094621</td>
+		<td>06/01/2021</td>
+		<td>1.597.696,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>12/01/2021     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71094617</td>
+		<td>25/11/2020</td>
+		<td>1.597.696,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>SUSPENDIDA     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71094618</td>
+		<td>25/11/2020</td>
+		<td>1.597.696,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>SUSPENDIDA     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>80725078</td>
+		<td>02/11/2020</td>
+		<td>1.824.293,33</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>SUSPENDIDA     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71094615</td>
+		<td>30/10/2020</td>
+		<td>1.597.696,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>SUSPENDIDA     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+	<tr>
+		<td>71094616</td>
+		<td>30/10/2020</td>
+		<td>1.597.696,00</td>
+		<td>SIN FONDOS                                    </td>
+		<td>CLUB ATLETICO SAN LORENZO DE ALMAGRO</td>
+		<td>No Registra Pago</td>
+		<td>SUSPENDIDA     </td>
+		<td>No</td>
+		<td>No</td>
+	</tr>
+
+
+</table>
+
+
+<br>&nbsp;
+<table  width="100%" id="table1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="left">* Ley 25.326, artículo 16, inciso 6
+ <br>
+			** Ley 25.326, artículo 38, inciso 3
+ <br>
+
+	</tr>
+</table>
+
+<br>
+
+<table  class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="6">RESUMEN DE CHEQUES RECHAZADOS EN CUENTAS DE PERSONAS JURIDICAS</td>
+		</tr>
+		<tr>
+			<td colspan="2">Rechazos sin fondos</td>
+			<td colspan="2">Rechazos defectos formales</td>
+			<td colspan="2">Rechazos a la registración</td>
+		</tr>
+		<tr>
+			<td>Cantidad</td>
+			<td>Monto</td>
+			<td>Cantidad</td>
+			<td>Monto</td>
+			<td>Cantidad</td>
+			<td>Monto</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>196</td>
+		<td>807.597.137,28</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+<table class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="3">RESUMEN TOTAL DE CHEQUES RECHAZADOS EN CUENTAS DE PERSONAS JURIDICAS</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Cantidad</td>
+			<td>Monto</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>Total cheques rechazados</td>
+		<td>196</td>
+		<td>807.597.137,28</td>
+	</tr>
+	<tr>
+		<td>Total cheques abonados</td>
+		<td>19</td>
+		<td>18.683.173,48</td>
+	</tr>
+	<tr>
+		<td>Porcentaje de cheques abonados</td>
+		<td>9,69%</td>
+		<td>2,31%</td>
+	</tr>
+</table>
+
+
+
+
+
+
+<table  class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="9">RESUMEN POR BANCO</td>
+		</tr>
+		<tr>
+			<td>Entidad</td>
+			<td colspan="2">Rechazos sin fondos</td>
+			<td colspan="2">Rechazos defectos formales</td>
+			<td colspan="2">Rechazos a la registración</td>
+			<td colspan="2">Cheques abonados</td>
+		</tr>
+	</thead>
+
+
+
+	<tr>
+		<td>Banco Nro. 1</td>
+		<td>97</td>
+		<td>649.409.655,92</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>19</td>
+		<td>18.683.173,48</td>
+  </tr>
+
+
+	<tr>
+		<td>Banco Nro. 2</td>
+		<td>42</td>
+		<td>41.759.396,19</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+  </tr>
+
+
+	<tr>
+		<td>Banco Nro. 3</td>
+		<td>55</td>
+		<td>115.205.863,17</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+  </tr>
+
+
+	<tr>
+		<td>Banco Nro. 4</td>
+		<td>2</td>
+		<td>1.222.222,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+  </tr>
+
+
+	<tr>
+		<td>Total</td>
+		<td>196</td>
+		<td>807.597.137,28</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>19</td>
+		<td>18.683.173,48</td>
+	</tr>
+</table>
+
+
+
+
+<table  class="table table-BCRA table-bordered table-responsive">
+	<thead>
+		<tr>
+			<td colspan="9">RESUMEN GENERAL DE CANTIDAD DE CHEQUES RECHAZADOS POR BANCO</td>
+		</tr>
+		<tr>
+			<td>Entidad</td>
+			<td colspan="2">Rechazos sin fondos</td>
+			<td colspan="2">Rechazos defectos formales</td>
+			<td colspan="2">Rechazos a la registración</td>
+			<td colspan="2">Cheques abonados</td>
+		</tr>
+	</thead>
+
+
+
+	<tr>
+		<td>Banco Nro. 1</td>
+		<td>98</td>
+		<td>651.211.003,92</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>19</td>
+		<td>18.683.173,48</td>
+  </tr>
+
+
+	<tr>
+		<td>Banco Nro. 2</td>
+		<td>42</td>
+		<td>41.759.396,19</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+  </tr>
+
+
+	<tr>
+		<td>Banco Nro. 3</td>
+		<td>55</td>
+		<td>115.205.863,17</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+  </tr>
+
+
+	<tr>
+		<td>Banco Nro. 4</td>
+		<td>2</td>
+		<td>1.222.222,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+  </tr>
+
+
+	<tr>
+		<td>Total</td>
+		<td>197</td>
+		<td>809.398.485,28</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>0</td>
+		<td>0,00</td>
+		<td>19</td>
+		<td>18.683.173,48</td>
+	</tr>
+</table>
+
+
+
+<table class="table table-transparente table-responsive">
+	<tr>
+		<td>
+			<p align="justify">Estas consultas se realizan sobre la Central de cheques rechazados, conformada por datos recibidos
+			diariamente de los bancos, que se publican sin alteraciones de acuerdo con los plazos dispuestos en el inciso 4
+			del artículo 26 de la Ley 25.326 de Protección de los Datos Personales y con el criterio establecido en el punto 1.3. de la Sección 1 del Texto ordenado Centrales de Información. Su difusión no implica conformidad por parte de este Banco Central.
+		</td>
+	</tr>
+</table>
+
+				</div>
+
+    <table class="table table-transparente table-responsive">
+
+	<tr>
+		<td>
+			<h3><a href="https://epyme.cajadevalores.com.ar/comportamientodepago" target="_blank">Facturas de Crédito Electrónicas MiPyMEs</a></h3>
+			La información del vínculo al que se accede a continuación corresponde a la Caja de Valores (BYMA). El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+
+
+<table class="table table-transparente table-responsive">
+	<tr>
+		<td>
+			<h2>Acceso a consulta de otros créditos</h2>
+        </td>
+	</tr>
+	<tr>
+		<td>
+			<h3><a href="https://servicioswww.anses.gob.ar/YHConsBCRASitio/ConsultaBCRA/InicioConsulta?cuil=20132146234" target="_blank">Créditos ANSES</a></h3>
+			La información del vínculo al que se accede a continuación corresponde a la Administración Nacional de la Seguridad Social (ANSES). El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h3><a href="https://extranet.hipotecario.com.ar/procrear/entidades/situacionBCRA?cuil=20132146234" target="_blank">ProCreAr</a></h3>
+			La información del vínculo al que se accede a continuación corresponde al Programa de Crédito Argentino (ProCreAr). El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+
+
+
+
+
+	<tr>
+		<td>
+		<br><br>
+		<h2>Acceso a consulta de deudas por impuestos provinciales</h2>
+        </td>
+	</tr>
+	<tr>
+		<td>
+			<h3><a href="http://www.arba.gov.ar/Aplicaciones/EstadoDeuda.asp?cuit=20132146234" target="_blank">ARBA</a></h3>
+			La información del vínculo al que se accede a continuación corresponde a la Agencia de Recaudación de la Provincia de Buenos Aires (ARBA).El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<p style="text-align: left">
+			<h3><a href="https://www.rentascordoba.gob.ar/mirentas/rentas.html?page=situacionfiscal&p_cuit=20132146234" target="_blank">Rentas Córdoba</a></h3>
+			La información del vínculo al que se accede a continuación corresponde a rentas de Còrdoba.El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p style="text-align: left">
+		<h3><a href="http://www.rentas.rionegro.gov.ar/bcra/index.jsp?cuit=20132146234" target="_blank">Rentas de Río Negro</a></h3>
+		La información del vínculo al que se accede a continuación corresponde a rentas de Rio Negro. El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<p style="text-align: left">
+			<h3><a href="http://www.dgrcorrientes.gov.ar/rentascorrientes/jsp/servicios/introConsultaBCRA.jsp?cuit=20132146234" target="_blank">Rentas de Corrientes</a></h3>
+			La información del vínculo al que se accede a continuación corresponde a rentas de Corrientes. El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<p style="text-align: left">
+			<h3><a href="http://www.dgrsalta.gov.ar/rentassalta/jsp/servicios/ConsultaNOSIS/consultaNOSIS.jsp?cuit=20132146234" target="_blank">Rentas de Salta</a></h3>
+			La información del vínculo al que se accede a continuación corresponde a rentas de Salta. El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<br><br>
+		<h2>Otros Registros</h2>
+        </td>
+	</tr>
+	<tr>
+		<td>
+			<h3><a href="https://rdam.mjus.gba.gob.ar/solicitudCertificado" target="_blank">Registro de Deudores Alimentarios Morosos de la Provincia de Buenos Aires (RDAM) </a></h3>
+			La información que brinda este <a href="https://rdam.mjus.gba.gob.ar/solicitudCertificado" target="_blank"> enlace </a> corresponde a la Dirección Provincial de Relaciones con la Justicia y Entidades Profesionales &#8211; Subsecretaría de Justicia - Ministerio de Justicia y Derechos Humanos de la Provincia de Buenos Aires. El BCRA no tiene responsabilidad alguna por los datos allí difundidos.
+		</td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+    </div>
+</div>
+
+<footer>
+	<meta name="format-detection" content="telephone=no">
+<p>&nbsp;</p>
+
+<footer class="footer-bcra">
+	<div class="row">
+	  	<div class="col-xs-12 col-sm-5 col-md-5 footer-bcra-contacto">
+
+            <ul>
+				<li style="font-weight: bolder">BANCO CENTRAL DE LA REPÚBLICA ARGENTINA</li>
+            	<li>Reconquista 266 </li>
+			<li>C1003ABF</li>
+				<li>Ciudad Autónoma de Buenos Aires,  Argentina</li>
+                <li>Tel. +54 11 4348-3500 / + 54 11 4000-1200</li>
+                <li>www.bcra.gob.ar</li>
+            </ul>
+
+      	</div>
+      	<div class="col-xs-12 col-sm-4 col-md-4 footer-bcra-contacto">
+
+            <ul>
+            	<li>
+						<a href="../Varios/Aviso_legal.asp" onclick="ga('send', 'event', 'Principal', 'Click', 'Footer- Aviso Legal', '0');">Aviso legal</a>
+				</li>
+
+
+<li><a href="../Varios/Mapa_del_sitio.asp" onclick="ga('send', 'event', 'Principal', 'Click', 'Footer- Mapa del sitio', '0');">Buscar</a></li>
+<li><a href="../BCRAyVos/Contacto.asp">Contactanos</a></li>
+
+
+
+		<!--<li onclick="MM_openBrWindow('http://bcra.perfit.com.ar/gestion2/form.php','Alertas','scrollbars=yes,width=620,height=615')">
+				-->
+						<li>
+					<a href="../Varios/Mapa_del_sitio.asp" onclick="ga('send', 'event', 'Principal', 'Click', 'Footer- Mapa del sitio', '0');">Mapa del sitio</a></li>
+				<li><a href="https://www.dopplerpages.com/alertas-7CE97/Notificaciones-bcra">Suscribirse</a>
+				</li>
+
+
+				<!--<li>
+						<a href="https://webmail.bcra.gob.ar/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fwebmail.bcra.gob.ar%2fowa%2f" target="_blank" >Webmail</a>
+				</li>-->
+            </ul>
+
+	  	</div>
+		<div class="col-xs-12 col-sm-3 col-md-3 footer-bcra-contacto">
+
+			<ul>
+			<li>
+					<a href="../Varios/English_information.asp" >ENG</a>
+				</li>
+                <li>
+					<a href="BCRAyVos/Usuarios_Financieros.asp" >Usuarios Financieros</a>
+				</li>
+                <li>
+					<a href="https://twitter.com/bcrausuarios" target="_blank" onclick="ga('send', 'event', 'Principal', 'Click', 'Footer- Twitter Usuarios', '0');"><svg xmlns="http://www.w3.org/2000/svg" height="1em" style="fill:white; translate: 0px 3px" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg> @BCRAusuarios</a>
+				</li>
+
+
+          	</ul>
+
+			</div>
+		<div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl footer-bcra-social">
+
+			<ul>
+				<li style="font-weight: bolder">Seguinos</li>
+                <li><a href="https://www.facebook.com/BancoCentralAR/" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+				<li><a href="https://www.instagram.com/bancocentral_ar/?hl=es-la" target="_blank"><i class="fa fa-instagram" style="color:white"></i> Instagram</a></li>
+                <li><a href="https://www.linkedin.com/company/bcra" target="_blank"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+				<li><a href="https://twitter.com/bancocentral_ar" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+				<li><a href="https://www.youtube.com/channel/UCq1CEC9JxvblsszG71-CPKw" target="_blank"><i class="fa fa-youtube"></i> Youtube</a></li>
+
+          	</ul>
+
+			</div>
+
+	</div>
+
+</footer>
+
+
+<section style="text-align:center; margin:10px auto; color:#B4B4B4; font-size: 100%; font-family:Calibri, Candara, Segoe, Optima, Arial, sans-serif;">
+	<p>El BCRA es el Banco Central de la República Argentina. No ofrece servicios bancarios o financieros al público en general.</p>
+	<p>Copyright 2006-2025 © | Banco Central de la República Argentina | Todos los derechos reservados</p>
+</section>
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+
+</footer>
+
+</div>
+
+</body>
+</html>

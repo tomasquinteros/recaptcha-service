@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
+use Facebook\WebDriver\WebDriverBy;
+use Facebook\WebDriver\WebDriverKeys;
 
 class ChromeSimulator
 {
@@ -38,10 +40,13 @@ class ChromeSimulator
         return $capabilities;
     }
 
-    public function humanDelay($min_seconds, $max_seconds): void
+    public function humanDelay(float $min_seconds = null, float $max_seconds = null): void
     {
-        $delay = rand($min_seconds * 1000000, $max_seconds * 1000000);
-        usleep($delay);
+        $delay = ['min' => 0.0, 'max' => 0.01];
+        if (!empty($min_seconds)) $delay['min'] = $min_seconds;
+        if (!empty($max_seconds)) $delay['max'] = $max_seconds; // FIX: era $delay['min']
+
+        usleep(rand($delay['min'] * 1_000_000, $delay['max'] * 1_000_000));
     }
 
     public function typeLikeHuman($element, $text, $split = true): void
@@ -68,5 +73,58 @@ class ChromeSimulator
 
         return implode('; ', $cookieStrings);
     }
+        /**
+     * @throws \Exception
+     */
+    public function findElements($driver, $elements): array
+    {
+        $elementsFound = array();
+        foreach($elements as $element) {
+            if (empty($element['type'])) throw new \Exception('Debe especificar el type de atributo a buscar.');
+            if (empty($element['value'])) throw new \Exception('Debe especificar el value de atributo a buscar.');
 
+            switch ($element['type']) {
+                case 'id':
+                    $value = $driver->findElement(WebDriverBy::id($element['value']));
+                    break;
+                case 'class_name':
+                    $value = $driver->findElement(WebDriverBy::className($element['value']));
+                    break;
+                case 'tag_name':
+                    $value = $driver->findElement(WebDriverBy::tagName($element['value']));
+                    break;
+                case 'name':
+                    $value = $driver->findElement(WebDriverBy::name($element['value']));
+                    break;
+                case 'css_selector':
+                    $value = $driver->findElement(WebDriverBy::cssSelector($element['value']));
+                    break;
+                case 'linktext':
+                    $value = $driver->findElement(WebDriverBy::linkText($element['value']));
+                    break;
+                case 'partial_link_text':
+                    $value = $driver->findElement(WebDriverBy::partialLinkText($element['value']));
+                    break;
+                case 'xpath':
+                    $value = $driver->findElement(WebDriverBy::xpath($element['value']));
+                    break;
+            }
+
+            if($value->isDisplayed() && $value->isEnabled()) $elementsFound[$element['value']] = $value;
+        }
+
+        if (count($elementsFound) !== count($elements)) throw new \Exception('Error en la busqueda de elementos html.');
+        return $elementsFound;
+    }
+
+    public function typingElement ($chromeSimulator ,$element, $value): void
+    {
+        $element->click();
+        $chromeSimulator->humanDelay();
+        $element->clear();
+        $element->sendKeys(WebDriverKeys::DELETE);
+        $chromeSimulator->humanDelay();
+        $chromeSimulator->typeLikeHuman($element, $value);
+        $chromeSimulator->humanDelay();
+    }
 }

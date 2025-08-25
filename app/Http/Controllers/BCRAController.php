@@ -8,12 +8,14 @@ use Exception;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
+use HttpRequest;
+use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class BCRAController extends Controller
 {
-    private $driver;
+    private string $cuit;
     private string $selenium_url;
     private ChromeSimulator $chromeSimulator;
 
@@ -24,38 +26,31 @@ class BCRAController extends Controller
 
     }
 
-    public function __invoke(Request $request)
+    public function __invoke($cuit)
     {
-        $human_speed = ['min' => 0.1, 'max' => 0.3];
         try {
-            // 1. Configurar y crear driver
-            $capabilities = $this->chromeSimulator->setupChrome();
-            $this->driver = RemoteWebDriver::create($this->selenium_url, $capabilities);
-            // 2. Le decimos que URL debe ir
-            $this->driver->get('https://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp');
-            // 3. Remover detectores de WebDriver
-            $this->driver->executeScript("
-                 Object.defineProperty(navigator, 'webdriver', {
-                     get: () => undefined,
-                 });
-                 delete navigator.__webdriver_script_fn;
-                 window.chrome = {
-                     runtime: {}
-                 };
-             ");
-            $cookies = $this->driver->manage()->getCookies();
-            $cookieString = '';
-            if (!empty($cookies)) {
-                foreach ($cookies as $c) {
-                    $cookieString .= $c['name'] . '=' . $c['value'] . ';';
-                }
-                $cookieString = rtrim($cookieString, ';');
-            }
+
+            if (strlen($cuit) !== 11) throw new Exception('El cuit no es valido. Debe ser igual a 11 digitos.', 400);
+            $this->cuit = $cuit;
+
+//            $debts = $this->getDebts();
+//            $bouncedChecks = $this->getBouncedChecks();
+//            $historicalDebts = $this->getHistoricalDebts();
+//
+//            return response()->json([
+//                'success' => true,
+//                'deudas' => $debts,
+//                'deudas_historicas' => $historicalDebts,
+//                'cheques_rechazados' => $bouncedChecks,
+//            ]);
+            $html = file_get_contents(public_path('consulta.html'));
+            $html = mb_convert_encoding($html, 'UTF-8', 'auto');
 
             return response()->json([
                 'success' => true,
-                'image' => $image,
+                'data' => $html,
             ]);
+
         } catch (Exception $e) {
             return response()->json([
                 'success' => false,
@@ -63,10 +58,42 @@ class BCRAController extends Controller
                 'message' => $e->getMessage(),
                 'content' => null
             ], $e->getCode() > 200 && $e->getCode() < 500 ?: 500);
-        } finally {
-            if (isset($this->driver)) {
-                $this->driver->quit();
-            }
         }
+    }
+
+    /**
+     * @throws ConnectionException
+     * @throws Exception
+     */
+    private function getDebts() : array {
+        $response = Http::withOptions(['verify' => false])->get("https://api.bcra.gob.ar/centraldedeudores/v1.0/Deudas/$this->cuit");
+        return $this->returnData($response);
+    }
+
+    /**
+     * @throws ConnectionException
+     * @throws Exception
+     */
+    private function getBouncedChecks() : array {
+        $response = Http::withOptions(['verify' => false])->get("https://api.bcra.gob.ar/centraldedeudores/v1.0/Deudas/ChequesRechazados/$this->cuit");
+        return $this->returnData($response);
+    }
+
+    /**
+     * @throws ConnectionException
+     * @throws Exception
+     */
+    private function getHistoricalDebts() : array {
+        $response = Http::withOptions(['verify' => false])->get("https://api.bcra.gob.ar/centraldedeudores/v1.0/Deudas/Historicas/$this->cuit");
+        return $this->returnData($response);
+    }
+    /**
+     * @throws Exception
+     */
+    private function returnData($response) : array {
+        if ($response->status() === 500) throw new \Exception("Error al consumir API de BCRA");
+        $response_json = $response->json();
+        if (isset($response_json['results'])) return $response_json['results'];
+        if (isset($response_json['errorMessages'])) return [];
     }
 }
